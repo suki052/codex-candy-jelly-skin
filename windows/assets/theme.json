@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "preset-codex-candy-jelly",
+  "name": "Codex 糖果果冻主题",
+  "brandSubtitle": "CANDY JELLY WORKSPACE",
+  "tagline": "把柔软、清晰和一点点甜带进工作台。",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "✿ 选择项目",
+  "statusText": "CANDY JELLY ONLINE",
+  "quote": "MAKE SOMETHING SWEET",
+  "image": "candy-background.png",
+  "appearance": "light",
+  "palette": {
+    "accent": "#e878b4"
+  },
+  "art": {
+    "focusX": 0.5,
+    "focusY": 0.5,
+    "safeArea": "none",
+    "taskMode": "off"
+  },
+  "artMetadata": {
+    "ratio": 1.7777777777777777
+  }
+}

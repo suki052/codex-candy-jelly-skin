@@ -1,0 +1,4002 @@
+:root.codex-dream-skin {
+  color-scheme: light;
+  --dream-accent: oklch(0.66 0.15 18);
+  --dream-accent-ink: oklch(0.98 0.006 20);
+  --dream-art-position: 72% 45%;
+  --dream-canvas: color-mix(in oklab, oklch(0.975 0.006 35) 96%, var(--dream-accent));
+  --dream-surface: color-mix(in oklab, oklch(0.988 0.004 35) 97%, var(--dream-accent));
+  --dream-surface-raised: color-mix(in oklab, oklch(0.995 0.003 35) 98%, var(--dream-accent));
+  --dream-sidebar: color-mix(in oklab, oklch(0.965 0.006 35) 94%, var(--dream-accent));
+  --dream-text: oklch(0.25 0.018 30);
+  --dream-text-muted: oklch(0.48 0.018 30);
+  --dream-line: color-mix(in oklab, oklch(0.75 0.012 30) 80%, var(--dream-accent));
+  --dream-line-soft: color-mix(in oklab, transparent 76%, var(--dream-accent));
+  --dream-accent-soft: color-mix(in oklab, var(--dream-accent) 14%, var(--dream-surface));
+  --dream-accent-hover: color-mix(in oklab, var(--dream-accent) 20%, var(--dream-surface));
+  --dream-hero-shade: color-mix(in oklab, var(--dream-surface) 93%, transparent);
+  --dream-ambient-opacity: .18;
+  --dream-shadow: 0 16px 42px color-mix(in oklab, var(--dream-accent) 9%, transparent);
+  --dream-immersive-edge: color-mix(in oklab, var(--dream-surface) 46%, transparent);
+  --dream-immersive-mid: color-mix(in oklab, var(--dream-surface) 28%, transparent);
+  --dream-immersive-far: color-mix(in oklab, var(--dream-surface) 14%, transparent);
+  --dream-immersive-sidebar: color-mix(in oklab, var(--dream-sidebar) 50%, transparent);
+  --dream-task-immersive-sidebar: color-mix(in oklab, var(--dream-sidebar) 72%, transparent);
+  --dream-immersive-composer: color-mix(in oklab, var(--dream-surface-raised) 76%, var(--dream-accent) 4%);
+  --dream-immersive-line: color-mix(in oklab, var(--dream-line) 76%, transparent);
+  --dream-task-immersive-edge: color-mix(in oklab, var(--dream-surface) 86%, transparent);
+  --dream-task-immersive-mid: color-mix(in oklab, var(--dream-surface) 78%, transparent);
+  --dream-task-immersive-far: color-mix(in oklab, var(--dream-surface) 66%, transparent);
+}
+
+:root.codex-dream-skin.dream-theme-dark {
+  color-scheme: dark;
+  --dream-canvas: color-mix(in oklab, oklch(0.16 0.012 245) 96%, var(--dream-accent));
+  --dream-surface: color-mix(in oklab, oklch(0.19 0.012 245) 95%, var(--dream-accent));
+  --dream-surface-raised: color-mix(in oklab, oklch(0.23 0.012 245) 95%, var(--dream-accent));
+  --dream-sidebar: color-mix(in oklab, oklch(0.145 0.014 245) 94%, var(--dream-accent));
+  --dream-text: oklch(0.93 0.008 245);
+  --dream-text-muted: oklch(0.7 0.012 245);
+  --dream-line: color-mix(in oklab, oklch(0.42 0.018 245) 76%, var(--dream-accent));
+  --dream-line-soft: color-mix(in oklab, transparent 78%, var(--dream-accent));
+  --dream-accent-soft: color-mix(in oklab, var(--dream-accent) 18%, var(--dream-surface));
+  --dream-accent-hover: color-mix(in oklab, var(--dream-accent) 27%, var(--dream-surface));
+  --dream-hero-shade: color-mix(in oklab, var(--dream-surface) 91%, transparent);
+  --dream-ambient-opacity: .22;
+  --dream-shadow: 0 18px 48px color-mix(in oklab, oklch(0.06 0.01 245) 72%, transparent);
+  --dream-immersive-edge: color-mix(in oklab, var(--dream-surface) 43%, transparent);
+  --dream-immersive-mid: color-mix(in oklab, var(--dream-surface) 27%, transparent);
+  --dream-immersive-far: color-mix(in oklab, var(--dream-surface) 16%, transparent);
+  --dream-immersive-sidebar: color-mix(in oklab, var(--dream-sidebar) 48%, transparent);
+  --dream-task-immersive-sidebar: color-mix(in oklab, var(--dream-sidebar) 70%, transparent);
+  --dream-immersive-composer: color-mix(in oklab, var(--dream-surface-raised) 88%, var(--dream-accent) 5%);
+  --dream-immersive-line: color-mix(in oklab, var(--dream-line) 82%, transparent);
+  --dream-task-immersive-edge: color-mix(in oklab, var(--dream-surface) 82%, transparent);
+  --dream-task-immersive-mid: color-mix(in oklab, var(--dream-surface) 74%, transparent);
+  --dream-task-immersive-far: color-mix(in oklab, var(--dream-surface) 60%, transparent);
+}
+
+html.codex-dream-skin body {
+  background: var(--dream-canvas) !important;
+  color: var(--dream-text) !important;
+  font-family: "Segoe UI Variable Text", "Segoe UI", "Microsoft YaHei UI", system-ui, sans-serif !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel {
+  color: var(--dream-text) !important;
+  background: var(--dream-sidebar) !important;
+  border-color: var(--dream-line-soft) !important;
+  box-shadow: inset -1px 0 var(--dream-line-soft) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel nav {
+  background: transparent !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel button {
+  color: var(--dream-text) !important;
+  transition: background-color 180ms cubic-bezier(.22, 1, .36, 1), color 180ms cubic-bezier(.22, 1, .36, 1) !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel button:hover {
+  background: var(--dream-accent-soft) !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
+html.codex-dream-skin aside.app-shell-left-panel [aria-current="page"] {
+  color: var(--dream-text) !important;
+  background: var(--dream-accent-hover) !important;
+  box-shadow: inset 0 0 0 1px var(--dream-line-soft) !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel svg,
+html.codex-dream-skin aside.app-shell-left-panel [class*="text-token"] {
+  color: currentColor;
+}
+
+html.codex-dream-skin main.main-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden !important;
+  color: var(--dream-text) !important;
+  background: var(--dream-surface) !important;
+  border-color: var(--dream-line-soft) !important;
+  box-shadow: inset 0 1px color-mix(in oklab, var(--dream-surface-raised) 72%, transparent) !important;
+}
+
+html.codex-dream-skin main.main-surface > header.app-header-tint {
+  /* Preserve Codex's native fixed header geometry and side-panel controls. */
+  color: var(--dream-text) !important;
+  background: color-mix(in oklab, var(--dream-surface) 94%, transparent) !important;
+  border-color: var(--dream-line-soft) !important;
+  backdrop-filter: blur(12px) saturate(1.05) !important;
+}
+
+/* Wide art also reaches the native application menu, which sits outside the
+   main surface and needs its own dark-theme legibility layer. */
+html.codex-dream-skin.dream-theme-dark [class~="group/application-menu-top-bar"] {
+  color: var(--dream-text) !important;
+  background: color-mix(in oklab, var(--dream-sidebar) 90%, transparent) !important;
+  border-bottom: 1px solid var(--dream-line-soft) !important;
+  box-shadow: 0 1px 12px color-mix(in oklab, var(--dream-canvas) 72%, transparent) !important;
+  backdrop-filter: blur(16px) saturate(.9) !important;
+}
+
+html.codex-dream-skin.dream-theme-dark [class~="group/application-menu-top-bar"] button,
+html.codex-dream-skin.dream-theme-dark [class~="group/application-menu-top-bar"] svg {
+  color: var(--dream-text) !important;
+  text-shadow: 0 1px 2px color-mix(in oklab, var(--dream-canvas) 82%, transparent) !important;
+}
+
+#codex-dream-skin-chrome {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+html.codex-dream-skin [role="main"] {
+  color: var(--dream-text);
+}
+
+/* Task routes use the art as a quiet atmospheric layer. Wide banners are shown
+   at their natural width instead of being enlarged and center-cropped. */
+html.codex-dream-skin .dream-task {
+  position: relative;
+  isolation: isolate;
+  min-height: 100%;
+  background: var(--dream-surface) !important;
+}
+
+html.codex-dream-skin .dream-task::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--dream-ambient-opacity);
+  background-image: var(--dream-art);
+  background-repeat: no-repeat;
+  background-position: var(--dream-art-position);
+  background-size: cover;
+  mask-image: linear-gradient(to bottom, oklch(0 0 0) 0, oklch(0 0 0 / .92) 38%, transparent 88%);
+}
+
+html.codex-dream-skin.dream-art-wide .dream-task::before {
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+html.codex-dream-skin.dream-art-wide:not(.dream-task-banner) .dream-task::before {
+  background-position: var(--dream-art-position);
+  background-size: cover;
+  mask-image: linear-gradient(to bottom, oklch(0 0 0) 0, oklch(0 0 0 / .92) 44%, oklch(0 0 0 / .72) 100%);
+}
+
+html.codex-dream-skin.dream-task-banner .dream-task::before {
+  bottom: auto;
+  height: min(46vh, 520px);
+  opacity: calc(var(--dream-ambient-opacity) * 1.8);
+  mask-image: linear-gradient(to bottom, oklch(0 0 0) 0, oklch(0 0 0 / .9) 52%, transparent 100%);
+}
+
+html.codex-dream-skin.dream-task-off .dream-task::before {
+  display: none;
+}
+
+html.codex-dream-skin .dream-task > * {
+  position: relative;
+  z-index: 1;
+}
+
+html.codex-dream-skin .dream-task article,
+html.codex-dream-skin .dream-task [data-message-author-role] {
+  color: var(--dream-text);
+}
+
+/* The home route keeps the source image expressive, with a semantic safe-area
+   wash selected from image focus metadata. */
+html.codex-dream-skin .dream-home {
+  --thread-content-max-width: min(1180px, calc(100cqw - 56px)) !important;
+  overflow-x: hidden !important;
+  background: var(--dream-surface) !important;
+}
+
+.dream-home > div:first-child {
+  min-height: 100% !important;
+  padding-top: 24px !important;
+}
+
+.dream-home > div:first-child > div:first-child {
+  flex: 0 0 clamp(390px, 42cqw, 510px) !important;
+  min-height: 390px !important;
+  align-items: flex-start !important;
+  padding-bottom: 0 !important;
+}
+
+.dream-home > div:first-child > div:first-child > div:first-child {
+  position: relative !important;
+  isolation: isolate;
+  width: calc(100% - 56px) !important;
+  max-width: 1180px !important;
+  height: clamp(230px, 27cqw, 326px) !important;
+  min-height: 230px !important;
+  flex: 0 1 auto !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid var(--dream-line) !important;
+  border-radius: 20px !important;
+  background-image: var(--dream-art) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: var(--dream-art-position) !important;
+  box-shadow: var(--dream-shadow) !important;
+}
+
+html.codex-dream-skin.dream-art-wide .dream-home > div:first-child > div:first-child > div:first-child {
+  background-size: cover !important;
+}
+
+.dream-home > div:first-child > div:first-child > div:first-child::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--dream-hero-shade) 0 32%, transparent 70%);
+}
+
+html.codex-dream-skin.dream-safe-right .dream-home > div:first-child > div:first-child > div:first-child::before {
+  background: linear-gradient(270deg, var(--dream-hero-shade) 0 32%, transparent 70%);
+}
+
+html.codex-dream-skin.dream-safe-center .dream-home > div:first-child > div:first-child > div:first-child::before {
+  background: radial-gradient(ellipse at center, var(--dream-hero-shade) 0 23%, transparent 72%);
+}
+
+html.codex-dream-skin.dream-safe-none .dream-home > div:first-child > div:first-child > div:first-child::before {
+  background: transparent;
+}
+
+.dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 30px 40px;
+}
+
+.dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
+  width: min(48%, 520px) !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+}
+
+html.codex-dream-skin.dream-safe-right .dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
+  justify-content: flex-end !important;
+}
+
+html.codex-dream-skin.dream-safe-right .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
+  align-items: flex-end !important;
+  text-align: right !important;
+}
+
+html.codex-dream-skin.dream-safe-center .dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
+  justify-content: center !important;
+}
+
+html.codex-dream-skin.dream-safe-center .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.dream-home [data-testid="home-icon"] {
+  display: none !important;
+}
+
+.dream-home [data-feature="game-source"] {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: inherit !important;
+  justify-content: flex-start !important;
+  max-width: 100% !important;
+  color: var(--dream-text) !important;
+  font-size: 28px !important;
+  line-height: 1.25 !important;
+  font-weight: 720 !important;
+  text-align: inherit !important;
+  text-shadow: 0 1px 16px var(--dream-surface);
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.dream-home [data-feature="game-source"] button {
+  margin: 0 4px;
+  padding: 2px 7px;
+  border: 1px solid var(--dream-line);
+  border-radius: 999px;
+  color: var(--dream-text) !important;
+  background: var(--dream-accent-soft) !important;
+  text-underline-offset: 4px;
+}
+
+.dream-home > div:first-child > div:first-child > div:first-child > div:nth-child(2) {
+  left: 0 !important;
+  right: 0 !important;
+  top: 100% !important;
+  margin-top: 16px !important;
+}
+
+.dream-home .group\/home-suggestions {
+  overflow: visible !important;
+}
+
+.dream-home .group\/home-suggestions button {
+  min-height: 112px !important;
+  padding: 16px 14px !important;
+  color: var(--dream-text) !important;
+  border: 1px solid var(--dream-line-soft) !important;
+  border-radius: 16px !important;
+  background: var(--dream-surface-raised) !important;
+  box-shadow: 0 8px 24px color-mix(in oklab, var(--dream-accent) 6%, transparent) !important;
+  transition: transform 180ms cubic-bezier(.22, 1, .36, 1), border-color 180ms cubic-bezier(.22, 1, .36, 1), background-color 180ms cubic-bezier(.22, 1, .36, 1) !important;
+}
+
+.dream-home .group\/home-suggestions button:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--dream-line) !important;
+  background: var(--dream-accent-soft) !important;
+}
+
+.dream-home .group\/home-suggestions button > span:first-child > span:first-child {
+  width: 38px;
+  height: 38px;
+  display: grid !important;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--dream-accent-ink) !important;
+  background: var(--dream-accent) !important;
+  box-shadow: 0 0 0 6px var(--dream-accent-soft);
+}
+
+.dream-home .group\/home-suggestions button svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: currentColor !important;
+}
+
+html.codex-dream-skin .composer-surface-chrome {
+  color: var(--dream-text) !important;
+  border: 1px solid var(--dream-line) !important;
+  border-radius: 18px !important;
+  background: color-mix(in oklab, var(--dream-surface-raised) 95%, transparent) !important;
+  box-shadow: 0 12px 34px color-mix(in oklab, var(--dream-accent) 8%, transparent) !important;
+  backdrop-filter: blur(14px) saturate(1.06) !important;
+}
+
+html.codex-dream-skin .ProseMirror {
+  color: var(--dream-text) !important;
+  caret-color: var(--dream-accent) !important;
+}
+
+html.codex-dream-skin button[class~="bg-token-foreground"] {
+  color: var(--dream-accent-ink) !important;
+  background: var(--dream-accent) !important;
+  box-shadow: none !important;
+}
+
+html.codex-dream-skin [data-message-author-role],
+html.codex-dream-skin article {
+  color: var(--dream-text);
+}
+
+/* A 16:9 or wider image is painted once on the native window. The sidebar,
+   title bar and route surface become coordinated readability layers instead
+   of repeating or cropping the image inside individual panels. */
+html.codex-dream-skin.dream-art-wide:has(main.main-surface.dream-home-shell) body,
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner):has(main.main-surface:not(.dream-home-shell)) body {
+  background-color: var(--dream-canvas) !important;
+  background-image: var(--dream-art) !important;
+  background-position: var(--dream-art-position) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+html.codex-dream-skin.dream-art-wide:has(main.main-surface.dream-home-shell)
+  aside.app-shell-left-panel,
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner):has(main.main-surface:not(.dream-home-shell))
+  aside.app-shell-left-panel {
+  background: linear-gradient(90deg,
+    var(--dream-immersive-sidebar),
+    var(--dream-immersive-edge)) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner):has(main.main-surface:not(.dream-home-shell))
+  aside.app-shell-left-panel {
+  background: linear-gradient(90deg,
+    var(--dream-task-immersive-sidebar),
+    var(--dream-task-immersive-edge)) !important;
+}
+
+html.codex-dream-skin.dream-art-wide:has(main.main-surface.dream-home-shell)
+  aside.app-shell-left-panel::after,
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner):has(main.main-surface:not(.dream-home-shell))
+  aside.app-shell-left-panel::after {
+  background: transparent !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell,
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner) main.main-surface:not(.dream-home-shell) {
+  background: linear-gradient(90deg,
+    var(--dream-immersive-edge),
+    var(--dream-immersive-mid) 64%,
+    var(--dream-immersive-far)) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner) main.main-surface:not(.dream-home-shell) {
+  background: linear-gradient(90deg,
+    var(--dream-task-immersive-edge),
+    var(--dream-task-immersive-mid) 64%,
+    var(--dream-task-immersive-far)) !important;
+}
+
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner) .dream-task {
+  background: transparent !important;
+}
+
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner) .dream-task::before {
+  content: none !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface > header.app-header-tint {
+  background: transparent !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  text-shadow: 0 1px 2px color-mix(in oklab, var(--dream-canvas) 86%, transparent),
+    0 0 8px color-mix(in oklab, var(--dream-canvas) 58%, transparent) !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface > header.app-header-tint svg {
+  filter: drop-shadow(0 1px 2px color-mix(in oklab, var(--dream-canvas) 72%, transparent));
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface [role="main"] {
+  background: transparent !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell
+  .dream-home > div:first-child > div:first-child > div:first-child {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell
+  .dream-home > div:first-child > div:first-child > div:first-child::before {
+  content: none !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell
+  .dream-home .group\/home-suggestions button {
+  background: color-mix(in oklab, var(--dream-surface-raised) 58%, transparent) !important;
+  box-shadow: 0 8px 22px color-mix(in oklab, var(--dream-canvas) 18%, transparent),
+    inset 0 0 0 1px var(--dream-immersive-line) !important;
+  backdrop-filter: blur(8px) saturate(1.04) !important;
+}
+
+/* The composer owns exactly one solid readability surface. Native bottom
+   gradients are cleared below so the control never appears double stacked. */
+html.codex-dream-skin.dream-art-wide .composer-surface-chrome {
+  color: var(--dream-text) !important;
+  background: var(--dream-immersive-composer) !important;
+  border: 0 !important;
+  box-shadow: 0 10px 30px color-mix(in oklab, var(--dream-canvas) 20%, transparent),
+    inset 0 0 0 1px var(--dream-immersive-line) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin.dream-art-wide .composer-surface-chrome::before {
+  content: none !important;
+}
+
+/* Current Codex builds render the home project picker in a hashed utility bar.
+   Merge it with the composer so the bottom control reads as one surface. */
+html.codex-dream-skin .dream-home-utility {
+  border: 1px solid var(--dream-line) !important;
+  border-bottom: 0 !important;
+  border-radius: 18px 18px 0 0 !important;
+  background: var(--dream-immersive-composer) !important;
+  box-shadow: none !important;
+}
+
+html.codex-dream-skin .dream-home:has(.dream-home-utility) .composer-surface-chrome {
+  border-radius: 0 0 18px 18px !important;
+  box-shadow: 0 10px 30px color-mix(in oklab, var(--dream-canvas) 20%, transparent),
+    inset 1px 0 var(--dream-immersive-line),
+    inset -1px 0 var(--dream-immersive-line),
+    inset 0 -1px var(--dream-immersive-line) !important;
+}
+
+/* Plugins, scheduled tasks and search routes ship opaque sticky wrappers.
+   Clear only full-window or sticky route chrome, leaving functional cards and
+   their hover states intact. */
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner)
+  main.main-surface:not(.dream-home-shell) div.sticky:has(input[type="text"]),
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner)
+  main.main-surface:not(.dream-home-shell) div.sticky:has(input[type="text"])::after {
+  background: transparent !important;
+}
+
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner)
+  main.main-surface:not(.dream-home-shell) div.no-drag:has(> input[type="text"]) {
+  background: var(--dream-immersive-composer) !important;
+  border: 0 !important;
+  box-shadow: inset 0 0 0 1px var(--dream-immersive-line) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner)
+  main.main-surface:not(.dream-home-shell)
+  [class~="bg-token-main-surface-primary"][class~="h-full"][class~="w-full"] {
+  background: transparent !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface .app-shell-main-content-frame {
+  border-top: 0 !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface .app-shell-main-content-top-fade {
+  display: none !important;
+  background: transparent !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface
+  .thread-scroll-container .bg-gradient-to-t.from-token-main-surface-primary {
+  background: transparent !important;
+}
+
+@media (max-width: 1120px) {
+  html.codex-dream-skin .dream-home {
+    --thread-content-max-width: min(940px, calc(100cqw - 36px)) !important;
+  }
+
+  .dream-home > div:first-child > div:first-child > div:first-child {
+    width: calc(100% - 36px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .dream-home > div:first-child {
+    padding-top: 16px !important;
+  }
+
+  .dream-home > div:first-child > div:first-child {
+    flex-basis: 370px !important;
+    min-height: 370px !important;
+  }
+
+  .dream-home > div:first-child > div:first-child > div:first-child {
+    height: 220px !important;
+    min-height: 220px !important;
+    border-radius: 16px !important;
+  }
+
+  .dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
+    padding: 24px;
+  }
+
+  .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
+    width: 62% !important;
+  }
+
+  .dream-home [data-feature="game-source"] {
+    font-size: 22px !important;
+  }
+
+  .dream-home .group\/home-suggestions button {
+    min-height: 104px !important;
+    padding: 12px 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .dream-home > div:first-child > div:first-child > div:first-child::before,
+  html.codex-dream-skin.dream-safe-right .dream-home > div:first-child > div:first-child > div:first-child::before,
+  html.codex-dream-skin.dream-safe-center .dream-home > div:first-child > div:first-child > div:first-child::before {
+    background: color-mix(in oklab, var(--dream-surface) 78%, transparent);
+  }
+
+  .dream-home > div:first-child > div:first-child > div:first-child > div:first-child,
+  html.codex-dream-skin.dream-safe-right .dream-home > div:first-child > div:first-child > div:first-child > div:first-child,
+  html.codex-dream-skin.dream-safe-center .dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
+    justify-content: center !important;
+  }
+
+  .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child,
+  html.codex-dream-skin.dream-safe-right .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child,
+  html.codex-dream-skin.dream-safe-center .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
+    width: min(88%, 440px) !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.codex-dream-skin *,
+  html.codex-dream-skin *::before,
+  html.codex-dream-skin *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Codex jelly Pink Retro edition
+
+   The layer below deliberately restyles existing Codex controls. It does not
+   draw a screenshot, replace native controls, or intercept pointer events.
+   ------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Dream Chill Round Gothic";
+  src: url("__RETRO_MENU_FONT_DATA__") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root.codex-dream-skin {
+  color-scheme: light;
+  --dream-accent: #d957a4;
+  --dream-accent-ink: #fffafd;
+  --dream-canvas: #f7c5dd;
+  --dream-surface: rgb(255 250 253 / .94);
+  --dream-surface-raised: rgb(255 254 255 / .97);
+  --dream-sidebar: rgb(255 239 248 / .94);
+  --dream-text: #3c2740;
+  --dream-text-muted: #785d76;
+  --dream-line: #b95a94;
+  --dream-line-soft: rgb(163 71 127 / .28);
+  --dream-accent-soft: rgb(244 174 210 / .42);
+  --dream-accent-hover: rgb(237 143 192 / .48);
+  --dream-hero-shade: rgb(255 250 253 / .88);
+  --dream-ambient-opacity: .11;
+  --dream-shadow: 0 12px 30px rgb(110 34 83 / .16);
+  --dream-immersive-edge: rgb(255 245 251 / .86);
+  --dream-immersive-mid: rgb(255 251 254 / .78);
+  --dream-immersive-far: rgb(255 245 251 / .68);
+  --dream-immersive-sidebar: rgb(255 230 244 / .9);
+  --dream-task-immersive-sidebar: rgb(255 235 247 / .95);
+  --dream-immersive-composer: rgb(255 252 254 / .96);
+  --dream-immersive-line: rgb(156 59 119 / .42);
+  --dream-task-immersive-edge: rgb(255 250 253 / .95);
+  --dream-task-immersive-mid: rgb(255 252 254 / .93);
+  --dream-task-immersive-far: rgb(255 247 251 / .9);
+  --retro-pink-title-top: #ffb9dc;
+  --retro-pink-title-mid: #ef82ba;
+  --retro-pink-title-bottom: #c64f93;
+  --retro-pink-border: #9d3e79;
+  --retro-pink-border-soft: #d88bb8;
+  --retro-pink-highlight: #fff8fd;
+  --retro-pink-panel-top: #fffafd;
+  --retro-pink-panel-bottom: #f8d8e9;
+  --retro-pink-selected-top: #ffc9e4;
+  --retro-pink-selected-bottom: #e985b8;
+  --retro-pink-ink: #3f2540;
+  --candy-chick: url("__CANDY_CHICK_DATA__");
+  --candy-chick-watermark: url("__CANDY_CHICK_DATA__");
+}
+
+html.codex-dream-skin body {
+  color: var(--retro-pink-ink) !important;
+  font-family: Tahoma, "Microsoft YaHei UI", "Microsoft YaHei", sans-serif !important;
+}
+
+/* Paint the UI-free wallpaper only once across the full native window. */
+html.codex-dream-skin.dream-art-wide:has(main.main-surface.dream-home-shell) body,
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner):has(main.main-surface:not(.dream-home-shell)) body {
+  background-color: #f8c7df !important;
+  background-image:
+    linear-gradient(rgb(255 255 255 / .05), rgb(211 79 148 / .04)),
+    var(--dream-art) !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* A thin non-interactive inset frame evokes a classic desktop application. */
+#codex-dream-skin-chrome {
+  display: block !important;
+  position: fixed;
+  z-index: 2147483000;
+  inset: 0;
+  border: 2px solid var(--retro-pink-border);
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / .75),
+    inset 0 3px 12px rgb(255 255 255 / .28);
+  pointer-events: none !important;
+}
+
+/* Codex's image viewer is a transparent full-window dialog at z-index 50.
+   Temporarily remove the decorative shell so the preview and its controls are
+   never covered; closing the dialog restores the skin automatically. */
+html.codex-dream-skin:has(.codex-dialog[role="dialog"] img)
+  #codex-dream-skin-chrome {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* A recognizable jelly messenger identity, kept inside the noninteractive
+   chrome layer so it never masks or replaces a real Codex control. */
+#codex-dream-skin-chrome::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: calc(50% - 78px);
+  width: 29px;
+  height: 29px;
+  background: var(--candy-chick) center / contain no-repeat;
+  filter: drop-shadow(0 1px 1px rgb(74 25 57 / .38));
+}
+
+#codex-dream-skin-chrome::after {
+  content: "糖果工作台";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font: 700 14px/20px Tahoma, "Microsoft YaHei UI", sans-serif;
+  letter-spacing: .01em;
+  text-shadow: 0 1px 2px #7e2e62, 0 0 4px rgb(105 35 77 / .46);
+  white-space: nowrap;
+}
+
+/* Native application menu / title strip. */
+html.codex-dream-skin [class~="group/application-menu-top-bar"] {
+  color: #542849 !important;
+  background:
+    linear-gradient(180deg,
+      var(--retro-pink-highlight) 0,
+      var(--retro-pink-title-top) 13%,
+      var(--retro-pink-title-mid) 55%,
+      var(--retro-pink-title-bottom) 100%) !important;
+  border-bottom: 1px solid var(--retro-pink-border) !important;
+  box-shadow:
+    inset 0 1px #ffffff,
+    inset 0 -1px rgb(100 34 76 / .32),
+    0 2px 7px rgb(104 33 78 / .18) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin [class~="group/application-menu-top-bar"] button {
+  color: #542849 !important;
+  font-family: "Dream Chill Round Gothic", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: .03em !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  text-shadow: 0 1px rgb(255 255 255 / .65) !important;
+}
+
+html.codex-dream-skin [class~="group/application-menu-top-bar"] button:hover {
+  border-color: rgb(143 50 105 / .48) !important;
+  background: linear-gradient(#fff8fc, #efb5d3) !important;
+  box-shadow: inset 0 1px #ffffff !important;
+}
+
+/* Left navigation becomes a glossy jelly-era folder/contact panel. */
+html.codex-dream-skin aside.app-shell-left-panel,
+html.codex-dream-skin.dream-art-wide:has(main.main-surface.dream-home-shell) aside.app-shell-left-panel,
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner):has(main.main-surface:not(.dream-home-shell)) aside.app-shell-left-panel {
+  color: var(--retro-pink-ink) !important;
+  background-image:
+    var(--candy-chick-watermark),
+    linear-gradient(180deg, rgb(255 252 254 / .96), rgb(250 221 236 / .94)) !important;
+  background-position: calc(100% - 15px) 56px, 0 0 !important;
+  background-size: 82px 82px, auto !important;
+  background-repeat: no-repeat, no-repeat !important;
+  border: 1px solid var(--retro-pink-border-soft) !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  box-shadow:
+    inset -1px 0 #ffffff,
+    inset 0 1px #ffffff,
+    2px 0 7px rgb(108 38 80 / .1) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel button {
+  min-height: 28px;
+  color: #4b354b !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  text-shadow: 0 1px #ffffff !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel button:hover {
+  border-color: #dc98be !important;
+  background: linear-gradient(180deg, #fff9fd, #f6cde2) !important;
+  box-shadow: inset 0 1px #ffffff !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel [class~="bg-token-list-hover-background"],
+html.codex-dream-skin aside.app-shell-left-panel [aria-current="page"] {
+  color: #4c2341 !important;
+  border-color: #b8548e !important;
+  background: linear-gradient(180deg,
+    var(--retro-pink-selected-top),
+    var(--retro-pink-selected-bottom)) !important;
+  box-shadow:
+    inset 0 1px #fff8fc,
+    inset 0 -1px rgb(151 50 105 / .25) !important;
+}
+
+/* Main frame and native header retain their real geometry and controls. */
+html.codex-dream-skin main.main-surface,
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell,
+html.codex-dream-skin.dream-art-wide:is(.dream-task-ambient, .dream-task-banner) main.main-surface:not(.dream-home-shell) {
+  color: var(--retro-pink-ink) !important;
+  background: rgb(255 252 254 / .91) !important;
+  border: 1px solid var(--retro-pink-border-soft) !important;
+  border-radius: 0 !important;
+  box-shadow:
+    inset 0 1px #ffffff,
+    inset 1px 0 #ffffff !important;
+}
+
+html.codex-dream-skin main.main-surface > header.app-header-tint,
+html.codex-dream-skin.dream-art-wide main.main-surface > header.app-header-tint {
+  color: #4e2c49 !important;
+  background: linear-gradient(180deg, #fffafd 0, #f9d9ea 58%, #edb5d2 100%) !important;
+  border-bottom: 1px solid #c875a7 !important;
+  box-shadow:
+    inset 0 1px #ffffff,
+    0 1px 4px rgb(119 42 88 / .1) !important;
+  text-shadow: 0 1px #ffffff !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin main.main-surface > header.app-header-tint button:hover {
+  background: linear-gradient(#fffafd, #f3c6dd) !important;
+  box-shadow: inset 0 0 0 1px #d484b1, inset 0 1px #ffffff !important;
+}
+
+html.codex-dream-skin .dream-home,
+html.codex-dream-skin .dream-task {
+  color: var(--retro-pink-ink) !important;
+  background: transparent !important;
+}
+
+/* Home hero remains native, readable, and visibly separate from the controls. */
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell
+  .dream-home > div:first-child > div:first-child > div:first-child,
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child {
+  border: 1px solid var(--retro-pink-border) !important;
+  border-radius: 7px !important;
+  background-color: #fff8fc !important;
+  background-image: var(--dream-art) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / .8),
+    0 4px 12px rgb(113 38 84 / .16) !important;
+}
+
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell
+  .dream-home > div:first-child > div:first-child > div:first-child::before,
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child::before {
+  content: "" !important;
+  display: block !important;
+  background: linear-gradient(90deg,
+    rgb(255 252 254 / .86),
+    rgb(255 252 254 / .44) 50%,
+    transparent 76%) !important;
+}
+
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: clamp(22px, 5vw, 72px);
+  width: clamp(82px, 10vw, 132px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  background: var(--candy-chick) center / contain no-repeat;
+  filter: drop-shadow(0 8px 10px rgb(105 35 77 / .2));
+  pointer-events: none;
+}
+
+.dream-home [data-feature="game-source"] {
+  color: #482640 !important;
+  font-family: Tahoma, "Microsoft YaHei UI", sans-serif !important;
+  font-size: clamp(24px, 2.2vw, 32px) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.02em;
+  text-shadow:
+    0 1px #ffffff,
+    0 0 12px rgb(255 255 255 / .85) !important;
+}
+
+/* Suggestion cards use the compact glossy-button language of jelly clients. */
+html.codex-dream-skin .dream-home .group\/home-suggestions button,
+html.codex-dream-skin.dream-art-wide main.main-surface.dream-home-shell
+  .dream-home .group\/home-suggestions button {
+  color: #4a3048 !important;
+  border: 1px solid #c56e9f !important;
+  border-radius: 6px !important;
+  background: linear-gradient(180deg, #fffefe 0, #fff4fa 44%, #f5cee2 100%) !important;
+  box-shadow:
+    inset 0 1px #ffffff,
+    inset 0 -1px rgb(166 60 121 / .16),
+    0 3px 8px rgb(111 39 82 / .12) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin .dream-home .group\/home-suggestions button:hover {
+  transform: translateY(-1px) !important;
+  border-color: #a9407c !important;
+  background: linear-gradient(180deg, #fffefe 0, #ffdcee 44%, #eea9cb 100%) !important;
+}
+
+html.codex-dream-skin .dream-home .group\/home-suggestions button > span:first-child > span:first-child {
+  color: #ffffff !important;
+  border: 1px solid #a33e79;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #ffb9db, #ce5494) !important;
+  box-shadow: inset 0 1px #fff4fa, 0 1px 3px rgb(111 34 79 / .18) !important;
+}
+
+/* Project utility and composer form one classic chat-input control. */
+html.codex-dream-skin .dream-home-utility {
+  color: #4c304a !important;
+  border: 1px solid var(--retro-pink-border) !important;
+  border-bottom: 0 !important;
+  border-radius: 7px 7px 0 0 !important;
+  background: linear-gradient(180deg, #fffafd, #f3c7df) !important;
+  box-shadow: inset 0 1px #ffffff !important;
+}
+
+html.codex-dream-skin .composer-surface-chrome,
+html.codex-dream-skin.dream-art-wide .composer-surface-chrome {
+  color: var(--retro-pink-ink) !important;
+  border: 1px solid var(--retro-pink-border) !important;
+  border-radius: 7px !important;
+  background: linear-gradient(180deg, #fffefe 0, #fffafd 72%, #f6d6e7 100%) !important;
+  box-shadow:
+    inset 0 1px #ffffff,
+    inset 0 0 0 1px rgb(255 255 255 / .62),
+    0 5px 14px rgb(109 34 79 / .16) !important;
+  backdrop-filter: none !important;
+}
+
+html.codex-dream-skin .dream-home:has(.dream-home-utility) .composer-surface-chrome {
+  border-radius: 0 0 7px 7px !important;
+  box-shadow:
+    inset 1px 0 #ffffff,
+    inset -1px 0 #ffffff,
+    inset 0 -1px #ffffff,
+    0 5px 14px rgb(109 34 79 / .16) !important;
+}
+
+html.codex-dream-skin .ProseMirror {
+  color: #382437 !important;
+  caret-color: #c4478d !important;
+}
+
+html.codex-dream-skin button[class~="bg-token-foreground"] {
+  color: #ffffff !important;
+  border: 1px solid #94356f !important;
+  border-radius: 5px !important;
+  background: linear-gradient(180deg, #f998c7, #c94689) !important;
+  box-shadow:
+    inset 0 1px #ffd8eb,
+    0 1px 2px rgb(99 28 70 / .24) !important;
+  text-shadow: 0 -1px rgb(103 30 71 / .38) !important;
+}
+
+html.codex-dream-skin button[class~="bg-token-foreground"]:hover {
+  background: linear-gradient(180deg, #ffacd2, #d85599) !important;
+}
+
+/* Messages, code blocks and inline code use restrained pink borders. */
+html.codex-dream-skin pre,
+html.codex-dream-skin [class*="codeBlock"],
+html.codex-dream-skin [data-code-block] {
+  color: #342b36 !important;
+  border: 1px solid #d18ab2 !important;
+  border-radius: 6px !important;
+  background: rgb(255 253 254 / .95) !important;
+  box-shadow: inset 0 1px 3px rgb(121 50 91 / .08) !important;
+}
+
+html.codex-dream-skin :not(pre) > code {
+  color: #74335f !important;
+  border: 1px solid #e3b3cd;
+  border-radius: 4px;
+  background: #fff4fa !important;
+}
+
+html.codex-dream-skin input,
+html.codex-dream-skin textarea {
+  color: #3c273d !important;
+  border-color: #cf83ad !important;
+  background-color: rgb(255 253 254 / .96) !important;
+}
+
+/* Menus and dialogs stay native and interactive while matching the skin. */
+html.codex-dream-skin [role="dialog"],
+html.codex-dream-skin [role="menu"],
+html.codex-dream-skin [role="listbox"] {
+  color: var(--retro-pink-ink) !important;
+  border-color: #b95c93 !important;
+  background: #fffafd !important;
+  box-shadow:
+    inset 0 1px #ffffff,
+    0 10px 30px rgb(92 27 66 / .22) !important;
+}
+
+html.codex-dream-skin ::selection {
+  color: #3a1830;
+  background: #f4b0d1;
+}
+
+html.codex-dream-skin * {
+  scrollbar-color: #d77bab #fff1f8;
+}
+
+html.codex-dream-skin *::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html.codex-dream-skin *::-webkit-scrollbar-track {
+  background: #fff1f8;
+  box-shadow: inset 1px 0 #e4b4ce;
+}
+
+html.codex-dream-skin *::-webkit-scrollbar-thumb {
+  border: 2px solid #fff1f8;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #eda2c8, #c95d99);
+}
+
+@media (max-width: 900px) {
+  #codex-dream-skin-chrome {
+    border-width: 1px;
+  }
+
+  html.codex-dream-skin .dream-home .group\/home-suggestions button {
+    border-radius: 5px !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   candy jelly shell preview: preserve Codex's live center workspace while adding
+   the toolbar, contact rail and status geometry that define the reference.
+   ------------------------------------------------------------------------- */
+
+:root.codex-dream-skin {
+  --candy-chick: url("__CANDY_CHICK_DATA__");
+  --candy-chick-watermark: url("__CANDY_CHICK_DATA__");
+  --candy-sprout: url("__CANDY_SPROUT_DATA__");
+  --retro-status-icons: url("__CANDY_STATUS_DATA__");
+  --candy-user-avatar: url("__CANDY_AVATAR_STRAWBERRY_DATA__");
+  --candy-avatar-cloud: url("__CANDY_AVATAR_CLOUD_DATA__");
+  --candy-avatar-star: url("__CANDY_AVATAR_STAR_DATA__");
+  --candy-avatar-mint: url("__CANDY_AVATAR_MINT_DATA__");
+  --candy-avatar-pudding: url("__CANDY_AVATAR_PUDDING_DATA__");
+  --candy-avatar-cookie: url("__CANDY_AVATAR_COOKIE_DATA__");
+  --retro-shell-gap: 8px;
+  --retro-toolbar-height: 58px;
+  --retro-right-width: 226px;
+  --retro-status-height: 31px;
+}
+
+html.codex-dream-skin body {
+  background: #f1bfd8 !important;
+}
+
+html.codex-dream-skin #root > div.relative.flex.flex-col
+  > div.relative.isolate.flex.max-h-full.min-h-0.w-full.flex-1 {
+  box-sizing: border-box !important;
+  gap: var(--retro-shell-gap) !important;
+  padding: 64px calc(var(--retro-right-width) + 14px) calc(var(--retro-status-height) + 2px) 8px !important;
+  background: linear-gradient(180deg, #f4a9ce, #d765a3 58%, #bb4d8c) !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel,
+html.codex-dream-skin main.main-surface {
+  min-width: 0 !important;
+  border: 1px solid #a64b84 !important;
+  border-radius: 6px !important;
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    0 1px 2px rgb(94 32 70 / .2) !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel {
+  overflow: hidden !important;
+  background: linear-gradient(180deg, #fffafd 0, #fff2f9 50%, #f5cfe2 100%) !important;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  z-index: 2 !important;
+  top: 61px !important;
+  right: 17px !important;
+  width: 65px !important;
+  height: 72px !important;
+  opacity: 1 !important;
+  background: var(--candy-chick) center / contain no-repeat !important;
+  filter: drop-shadow(0 2px 2px rgb(89 33 67 / .16));
+  pointer-events: none !important;
+}
+
+html.codex-dream-skin main.main-surface {
+  background: #fffdfd !important;
+}
+
+html.codex-dream-skin main.main-surface > header.app-header-tint {
+  min-height: 39px !important;
+  background: linear-gradient(180deg, #fff 0, #fff8fc 48%, #f2c9df 100%) !important;
+  border-bottom: 1px solid #b65d91 !important;
+  border-radius: 5px 5px 0 0 !important;
+  box-shadow: inset 0 1px #fff, inset 0 -1px rgb(255 255 255 / .64) !important;
+}
+
+#codex-dream-skin-chrome::before {
+  top: 3px !important;
+  left: calc(50% - 78px) !important;
+  width: 27px !important;
+  height: 29px !important;
+  background: var(--candy-chick) center / contain no-repeat !important;
+}
+
+#codex-dream-skin-chrome::after {
+  content: "糖果工作台" !important;
+}
+
+.candy-shell,
+.retro-toolbar,
+.retro-right-rail,
+.retro-status-bar {
+  box-sizing: border-box;
+  font-family: Tahoma, "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+.candy-shell {
+  pointer-events: none;
+}
+
+.retro-toolbar {
+  position: fixed;
+  top: 41px;
+  left: 8px;
+  right: 8px;
+  height: var(--retro-toolbar-height);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 18px;
+  color: #44223e;
+  border: 1px solid #974073;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #fff 0, #fff9fc 18%, #f7d5e7 54%, #dda2c2 100%);
+  box-shadow:
+    inset 0 0 0 1px #fff,
+    inset 0 -1px rgb(145 54 106 / .22),
+    0 2px 4px rgb(81 29 61 / .2);
+}
+
+.retro-tool {
+  height: 45px;
+  min-width: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-shadow: 0 1px #fff;
+}
+
+.retro-tool-icon {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border: 1px solid rgb(90 37 72 / .52);
+  border-radius: 7px;
+  font: 800 20px/1 Tahoma, sans-serif;
+  text-shadow: 0 -1px rgb(75 28 57 / .4);
+  box-shadow: inset 0 1px rgb(255 255 255 / .8), 0 1px 2px rgb(70 28 53 / .25);
+}
+
+.retro-tool-new { background: linear-gradient(#fff3c4, #ef9d2e); }
+.retro-tool-plan { background: linear-gradient(#ffd9eb, #d44c96); }
+.retro-tool-plugin { background: linear-gradient(#d9ffbd, #54a543); }
+.retro-tool-site { background: linear-gradient(#cff4ff, #4b91ca); }
+.retro-tool-pr { background: linear-gradient(#d9cfff, #7962c8); }
+.retro-tool-chat { background: linear-gradient(#fff5a5, #e8a82e); }
+
+.retro-tool-separator {
+  width: 1px;
+  height: 34px;
+  margin: 0 3px;
+  background: #bb7da0;
+  box-shadow: 1px 0 #fff;
+}
+
+.retro-right-rail {
+  position: fixed;
+  top: 105px;
+  right: 8px;
+  bottom: 31px;
+  width: var(--retro-right-width);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #39273f;
+  pointer-events: auto;
+}
+
+.retro-contact-card {
+  overflow: hidden;
+  border: 1px solid #924071;
+  border-radius: 6px;
+  background: #fff9fc;
+  box-shadow: inset 0 0 0 1px #fff, 0 1px 3px rgb(83 29 62 / .2);
+}
+
+.retro-contact-card > header {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px;
+  color: #3d2440;
+  border-bottom: 1px solid #b65e93;
+  background: linear-gradient(180deg, #fff 0, #f9e1ed 52%, #dea2c1 100%);
+  text-shadow: 0 1px #fff;
+}
+
+.retro-contact-card > header b {
+  font-size: 14px;
+}
+
+.retro-panel-actions {
+  margin-left: auto;
+  color: #74405f;
+}
+
+.retro-bot-stage {
+  position: relative;
+  height: 148px;
+  overflow: hidden;
+  border-bottom: 1px solid #c786ac;
+  background:
+    radial-gradient(circle at 20% 25%, #fff 0 2px, transparent 3px),
+    radial-gradient(circle at 84% 18%, #fff 0 3px, transparent 4px),
+    linear-gradient(180deg, #fff7fc 0, #f5ddf2 35%, #d8d8ff 100%);
+}
+
+.retro-bot-stage::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: 10px;
+  width: 70px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgb(102 72 139 / .18);
+  filter: blur(3px);
+  transform: translateX(-50%) scaleX(.9);
+  transform-origin: center;
+  animation: candy-sprout-shadow 3.2s ease-in-out infinite;
+}
+
+.retro-star {
+  position: absolute;
+  color: #fff;
+  font-style: normal;
+  text-shadow: 0 0 5px #d782b1;
+}
+.retro-star.star-a { top: 17px; left: 24px; }
+.retro-star.star-b { top: 41px; right: 25px; }
+.retro-star.star-c { bottom: 16px; left: 44px; }
+
+.retro-bot-cloud {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  width: 104px;
+  height: 88px;
+  transform: translateX(-50%);
+  border: 2px solid #6a4a9d;
+  border-radius: 44% 46% 38% 42%;
+  background: linear-gradient(145deg, #f2c7ef, #ab85dc 50%, #6c5cba);
+  box-shadow: inset 0 2px #fff, 0 7px 11px rgb(82 57 133 / .22);
+}
+
+.retro-bot-cloud::before,
+.retro-bot-cloud::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  width: 24px;
+  height: 34px;
+  border: 2px solid #6a4a9d;
+  border-radius: 45%;
+  background: linear-gradient(#b294de, #6f62bd);
+}
+.retro-bot-cloud::before { left: 14px; transform: rotate(8deg); }
+.retro-bot-cloud::after { right: 14px; transform: rotate(-8deg); }
+
+.retro-bot-cloud span {
+  position: absolute;
+  z-index: 2;
+  left: 16px;
+  right: 16px;
+  top: 25px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  color: #9ef9ff;
+  border: 2px solid #43336e;
+  border-radius: 7px;
+  background: #3a305c;
+  font: 800 24px/1 Consolas, monospace;
+  box-shadow: inset 0 1px rgb(255 255 255 / .2);
+}
+
+/* Reuse Codex's own sprout helper spritesheet. The selected idle frame uses the
+   native 8-by-11 atlas geometry and pixel rendering. */
+.candy-sprout {
+  display: block;
+  background-image: var(--candy-sprout);
+  background-repeat: no-repeat;
+  background-size: 800% 1100%;
+  background-position: 14.2857% 0%;
+  image-rendering: pixelated;
+}
+
+.candy-sprout-stage {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  left: 50%;
+  width: 108px;
+  height: 117px;
+  transform: translateX(-50%);
+  transform-origin: 50% 88%;
+  filter: drop-shadow(0 7px 7px rgb(92 52 118 / .22));
+  animation:
+    candy-sprout-idle-frames 6.4s step-end infinite,
+    candy-sprout-idle-bob 3.2s ease-in-out infinite;
+}
+
+/* The first row is sprout helper's native idle strip. Most of the cycle rests on the
+   neutral pose; the short frame run creates the occasional blink/leaf wiggle
+   of the Codex desktop pet instead of making the mascot constantly fidget. */
+@keyframes candy-sprout-idle-frames {
+  0%, 52%, 100% { background-position: 14.2857% 0%; }
+  55% { background-position: 28.5714% 0%; }
+  58% { background-position: 42.8571% 0%; }
+  61% { background-position: 57.1429% 0%; }
+  64% { background-position: 71.4286% 0%; }
+  67% { background-position: 85.7143% 0%; }
+  70% { background-position: 71.4286% 0%; }
+  73% { background-position: 57.1429% 0%; }
+  76% { background-position: 42.8571% 0%; }
+  79% { background-position: 28.5714% 0%; }
+  82% { background-position: 14.2857% 0%; }
+}
+
+@keyframes candy-sprout-idle-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
+  48% { transform: translateX(-50%) translateY(-2px) scale(1.008, .994); }
+  52% { transform: translateX(-50%) translateY(-2px) scale(1.008, .994); }
+}
+
+@keyframes candy-sprout-shadow {
+  0%, 100% { opacity: .78; transform: translateX(-50%) scaleX(.9); }
+  48%, 52% { opacity: .55; transform: translateX(-50%) scaleX(.78); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candy-sprout-stage,
+  .retro-bot-stage::after {
+    animation: none;
+  }
+}
+
+.retro-presence {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px;
+  border-bottom: 1px solid #d9a7c4;
+  background: linear-gradient(#fff, #f7ddea);
+}
+.retro-presence > i,
+.retro-friend small > i,
+.retro-online-dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #4b8c29;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #f1ff9a 0 18%, #80c826 25% 66%, #4b9425 70%);
+  box-shadow: inset 0 1px #fff;
+}
+.retro-presence em {
+  margin-left: auto;
+  padding: 1px 4px;
+  color: #fff;
+  border: 1px solid #a6621e;
+  border-radius: 3px;
+  background: linear-gradient(#fbc869, #d47922);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.retro-bot-copy {
+  margin: 8px 10px;
+  padding: 8px;
+  color: #51334e;
+  border: 1px solid #d2a0bd;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.retro-card-icons {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 4px;
+  color: #bd4c8a;
+  border-top: 1px solid #d5a4bf;
+  background: linear-gradient(#fff, #efd0e1);
+  font-size: 18px;
+}
+
+.retro-friends-card {
+  flex: 1;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  transition: flex-basis 220ms ease, min-height 220ms ease, height 220ms ease;
+}
+
+.retro-friend-list {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-color: #d98bb8 #fbeaf3;
+  scrollbar-width: thin;
+  transition: max-height 220ms ease, opacity 150ms ease;
+}
+
+.retro-friends-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+.retro-friends-toggle:hover {
+  background: linear-gradient(180deg, #fff 0, #f8d4e7 52%, #d98fb7 100%);
+}
+.retro-friends-toggle:focus-visible {
+  outline: 1px dotted #8f3e70;
+  outline-offset: -3px;
+}
+.retro-friends-card.retro-friends-collapsed {
+  flex: 0 0 32px;
+  min-height: 32px;
+  height: 32px;
+}
+.retro-friends-card.retro-friends-collapsed .retro-friend-list,
+.retro-friends-card.retro-friends-collapsed .retro-friend-search {
+  max-height: 0 !important;
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.retro-friend {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 8px;
+  padding: 7px;
+  border: 1px solid #e0bad0;
+  border-radius: 5px;
+  background: linear-gradient(#fff, #fff4fa);
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 120ms ease, background 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+.retro-friend:hover,
+.retro-friend.retro-friend-menu-open {
+  border-color: #c35b98;
+  background: linear-gradient(#fff, #f7d8e9);
+  box-shadow: inset 0 0 0 1px #fff, 0 1px 4px rgb(145 52 105 / .18);
+}
+.retro-friend:focus-visible {
+  outline: 1px dotted #73385e;
+  outline-offset: -3px;
+}
+.retro-friend.retro-friend-favorite::after {
+  content: "★";
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  color: #f5ad20;
+  font-size: 12px;
+  text-shadow: 0 1px #fff;
+}
+.retro-friend.retro-friend-muted {
+  opacity: .66;
+}
+
+.retro-friend-avatar {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid #a96790;
+  border-radius: 5px;
+  background-color: #f5d6e9;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.retro-friend-avatar.penguin { background: #f7ddea var(--candy-chick) center / 36px 40px no-repeat; }
+.retro-friend-avatar.avatar-strawberry {
+  background: #fff var(--candy-user-avatar) center / cover no-repeat;
+}
+.retro-friend-avatar.avatar-cloud {
+  background: #fff var(--candy-avatar-cloud) center / cover no-repeat;
+}
+.retro-friend-avatar.avatar-star {
+  background: #fff var(--candy-avatar-star) center / cover no-repeat;
+}
+.retro-friend-avatar.avatar-mint {
+  background: #fff var(--candy-avatar-mint) center / cover no-repeat;
+}
+.retro-friend-avatar.avatar-pudding {
+  background: #fff var(--candy-avatar-pudding) center / cover no-repeat;
+  filter: grayscale(1);
+}
+.retro-friend-avatar.avatar-cookie {
+  background: #fff var(--candy-avatar-cookie) center / cover no-repeat;
+}
+.retro-friend-avatar.sprout {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#f6e8ff, #d8c5f1);
+}
+.retro-friend-avatar.sprout > .candy-sprout {
+  position: absolute;
+  left: -25px;
+  top: -32px;
+  width: 88px;
+  height: 96px;
+}
+.retro-friend-avatar.terminal {
+  display: grid;
+  place-items: center;
+  color: #9ef9ff;
+  background: linear-gradient(#64528e, #39305b);
+  font: 800 16px/1 Consolas, monospace;
+}
+
+.retro-friend > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+}
+.retro-friend small { display: flex; align-items: center; gap: 4px; color: #74546d; }
+.retro-friend small > i { width: 8px; height: 8px; }
+.retro-friend small.retro-invisible { color: #9b7b8f; }
+.retro-friend small.retro-invisible > i {
+  position: relative;
+  border-color: #ee923f;
+  background: linear-gradient(#ffb05f, #ff8d38);
+  box-shadow: inset 0 1px rgb(255 255 255 / .55);
+}
+.retro-friend small.retro-invisible > i::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  width: 4px;
+  height: 1px;
+  border-radius: 1px;
+  background: #fff;
+}
+.retro-friend small.retro-busy { color: #a34d70; }
+.retro-friend small.retro-busy > i {
+  position: relative;
+  border-color: #e35e80;
+  background: linear-gradient(#ff8eaa, #f05d80);
+  box-shadow: inset 0 1px rgb(255 255 255 / .55);
+}
+.retro-friend small.retro-busy > i::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  width: 4px;
+  height: 1px;
+  border-radius: 1px;
+  background: #fff;
+}
+.retro-friend small.retro-stealth { color: #8b8f99; }
+.retro-friend small.retro-stealth > i {
+  border-color: #aeb3be;
+  background: radial-gradient(circle at 35% 30%, #e3e5eb 0 18%, #b8bdc8 26% 68%, #a4aab5 72%);
+  box-shadow: inset 0 1px rgb(255 255 255 / .7);
+}
+.retro-friend small.retro-dnd { color: #b24f74; }
+.retro-friend small.retro-dnd > i {
+  position: relative;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  border: 2px solid #ff4f7d;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgb(255 79 125 / .12), inset 0 1px rgb(255 255 255 / .8);
+}
+.retro-friend small.retro-dnd > i::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 4px;
+  width: 7px;
+  height: 2px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  border-radius: 1px;
+  background: #ff4f7d;
+}
+.retro-friend small.retro-away { color: #8a8e99; }
+.retro-friend small.retro-away > i {
+  position: relative;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  border: 1px solid #aeb2be;
+  background: linear-gradient(145deg, #d5d8e1, #afb4c2);
+  box-shadow: inset 0 1px rgb(255 255 255 / .65);
+}
+.retro-friend small.retro-away > i::before,
+.retro-friend small.retro-away > i::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 1px;
+  height: 4px;
+  border-radius: 1px;
+  background: #fff;
+}
+.retro-friend small.retro-away > i::after {
+  top: 5px;
+  width: 3px;
+  height: 1px;
+}
+
+.retro-friend-search {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin: auto 8px 8px;
+  padding: 0 8px;
+  color: #9a7890;
+  border: 1px solid #c88bac;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 12px;
+}
+.retro-friend-search span { margin-left: auto; color: #613a58; font-size: 18px; }
+
+/* Right rail: one soft profile card plus a sticker-style candy friend list. */
+.retro-right-rail {
+  gap: 6px;
+}
+
+.retro-right-rail .retro-contact-card {
+  overflow: visible;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.retro-codex-card {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden !important;
+  padding-bottom: 7px;
+  border: 1px solid rgb(197 91 148 / .48) !important;
+  border-radius: 20px !important;
+  background: linear-gradient(180deg, rgb(255 255 255 / .88), rgb(255 239 248 / .78)) !important;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .8), 0 5px 13px rgb(140 62 107 / .14) !important;
+}
+
+.retro-profile-sky {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 17% 21%, rgb(255 255 255 / .92) 0 3px, transparent 4px),
+    radial-gradient(circle at 85% 18%, rgb(255 255 255 / .88) 0 4px, transparent 5px),
+    radial-gradient(ellipse at 13% 78%, rgb(255 255 255 / .45) 0 18px, transparent 19px),
+    radial-gradient(ellipse at 92% 69%, rgb(255 255 255 / .42) 0 22px, transparent 23px),
+    linear-gradient(165deg, #fff5fc 0%, #f8dff5 42%, #d9d9ff 100%);
+}
+
+.retro-profile-sky::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, transparent 0 45%, rgb(255 255 255 / .28) 46% 48%, transparent 49%),
+    radial-gradient(circle at 30% 70%, rgb(255 255 255 / .4) 0 2px, transparent 3px);
+  pointer-events: none;
+}
+
+.retro-profile-sky::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: 16px;
+  width: 76px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgb(102 72 139 / .17);
+  filter: blur(3px);
+  transform: translateX(-50%) scaleX(.9);
+  transform-origin: center;
+  animation: candy-sprout-shadow 3.2s ease-in-out infinite;
+}
+
+.retro-profile-sky .candy-sprout-stage {
+  top: 15px;
+}
+
+.retro-profile-nameplate,
+.retro-profile-level {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(166 79 126 / .58);
+  box-shadow: inset 0 1px rgb(255 255 255 / .95), 0 3px 7px rgb(115 48 88 / .18);
+  font-style: normal;
+}
+
+.retro-profile-nameplate {
+  left: 10px;
+  bottom: 9px;
+  gap: 5px;
+  max-width: 151px;
+  padding: 4px 9px 4px 7px;
+  border-radius: 999px 999px 999px 7px;
+  background: linear-gradient(180deg, #fff, #f8d9eb);
+  color: #512f49;
+  font-size: 12px;
+}
+
+.retro-profile-nameplate > i {
+  width: 10px;
+  height: 7px;
+  flex: 0 0 auto;
+  border: 1px solid #4d9a2f;
+  border-radius: 90% 20% 90% 20%;
+  background: linear-gradient(135deg, #c9f47a, #69bd36);
+  transform: rotate(-32deg);
+}
+
+.retro-profile-nameplate b {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.retro-profile-level {
+  top: 11px;
+  right: 10px;
+  padding: 3px 7px;
+  color: #fff;
+  border-color: #bc7227;
+  border-radius: 8px 8px 3px 8px;
+  background: linear-gradient(180deg, #ffd878, #e68a2d);
+  font-size: 10px;
+  font-weight: 800;
+  text-shadow: 0 1px rgb(133 70 19 / .35);
+  transform: rotate(2deg);
+}
+
+.retro-bot-bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 9px 10px 7px;
+  padding: 8px 10px;
+  color: #57344f;
+  border: 1px solid rgb(210 135 176 / .62);
+  border-radius: 14px 14px 14px 5px;
+  background: rgb(255 255 255 / .74);
+  box-shadow: inset 0 1px #fff, 0 2px 6px rgb(153 75 119 / .1);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.retro-bot-bubble::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: -6px;
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid rgb(210 135 176 / .62);
+  border-top: 1px solid rgb(210 135 176 / .62);
+  background: #fff9fc;
+  transform: rotate(45deg);
+}
+
+.retro-bot-bubble b,
+.retro-bot-bubble span {
+  position: relative;
+  z-index: 1;
+}
+
+.retro-bot-bubble span {
+  color: #87667c;
+}
+
+.retro-card-icons {
+  height: 36px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  margin: 0 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.retro-jelly-icon {
+  position: relative;
+  min-width: 0;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: #fff;
+  border: 1px solid rgb(111 52 86 / .25);
+  border-radius: 12px 12px 9px 9px;
+  box-shadow: inset 0 2px rgb(255 255 255 / .62), 0 3px 5px rgb(114 53 90 / .14);
+  cursor: pointer;
+  font: 800 14px/1 Tahoma, sans-serif;
+  text-shadow: 0 1px rgb(78 34 61 / .28);
+  transition: transform 150ms cubic-bezier(.2, .9, .35, 1.35), filter 150ms ease, box-shadow 150ms ease;
+}
+
+.retro-jelly-icon::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  top: 3px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / .38);
+}
+
+.retro-jelly-icon:hover,
+.retro-jelly-icon:focus-visible {
+  outline: none;
+  filter: saturate(1.08) brightness(1.04);
+  transform: translateY(-3px) scale(1.06, 1.04);
+  box-shadow: inset 0 2px rgb(255 255 255 / .72), 0 6px 9px rgb(114 53 90 / .18);
+}
+
+.jelly-message { background: linear-gradient(180deg, #8bd8ff, #58a9dc); }
+.jelly-star { color: #fff8bd; background: linear-gradient(180deg, #ffd97c, #eda54a); }
+.jelly-mail { background: linear-gradient(180deg, #c8a8f4, #9a78d3); }
+.jelly-flower { background: linear-gradient(180deg, #ff9fc6, #de6da4); }
+.jelly-more { background: linear-gradient(180deg, #a9df89, #66b55d); }
+
+.retro-friend-tabs {
+  flex: 0 0 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 2px 4px;
+  pointer-events: auto;
+}
+
+.retro-friend-tab {
+  position: relative;
+  min-width: 0;
+  padding: 3px 6px;
+  color: #815570;
+  border: 1px solid rgb(198 115 160 / .4);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgb(255 255 255 / .84), rgb(255 230 243 / .78));
+  box-shadow: inset 0 1px #fff;
+  cursor: pointer;
+  font: 700 11px/1.2 Tahoma, "Microsoft YaHei UI", sans-serif;
+  transition: transform 130ms ease, box-shadow 130ms ease, color 130ms ease;
+}
+
+.retro-friend-tab:hover,
+.retro-friend-tab:focus-visible {
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.retro-friend-tab-active {
+  color: #6f3158;
+  border-color: rgb(184 76 137 / .62);
+  background: linear-gradient(180deg, #fff, #f5bddb);
+  box-shadow: inset 0 1px #fff, 0 3px 7px rgb(145 58 108 / .18);
+  transform: translateY(-1px) scale(1.03);
+}
+
+.retro-friends-card {
+  flex: 1;
+  min-height: 150px;
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 4px;
+  background: linear-gradient(180deg, rgb(255 251 253 / .42), rgb(255 239 248 / .28)) !important;
+  transition: flex-basis 220ms ease, min-height 220ms ease, height 220ms ease;
+}
+
+.retro-friends-card > .retro-friends-toggle {
+  height: 28px;
+  flex: 0 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-sizing: border-box;
+  margin: 0 5px 2px;
+  padding: 0 7px;
+  color: #70445f;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgb(254 220 238 / .62), rgb(255 255 255 / .2));
+  text-shadow: 0 1px #fff;
+}
+
+.retro-friends-card > .retro-friends-toggle:hover {
+  background: linear-gradient(90deg, rgb(249 197 225 / .75), rgb(255 255 255 / .35));
+}
+
+.retro-friends-card > .retro-friends-toggle b {
+  font-size: 11px;
+}
+
+.retro-list-sprout {
+  color: #6ea947;
+  font-size: 15px;
+  transform: rotate(-18deg);
+}
+
+.retro-collapse-bubble {
+  width: 19px;
+  height: 19px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  border-radius: 50%;
+  background: rgb(255 255 255 / .68);
+  box-shadow: 0 1px 3px rgb(130 62 99 / .12);
+}
+
+.retro-friend-tab-panel {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.retro-friend-tab-panel[hidden],
+.retro-friend-tab-empty[hidden] {
+  display: none !important;
+}
+
+.retro-friend-tab-empty {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 6px 10px 10px;
+  color: #8e6b82;
+  border-radius: 22px;
+  background: rgb(255 255 255 / .38);
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .58);
+}
+
+.retro-friend-tab-empty > span { font-size: 27px; }
+.retro-friend-tab-empty > b { color: #74465f; font-size: 12px; }
+.retro-friend-tab-empty > small { font-size: 10px; }
+
+.retro-friend-list {
+  padding: 1px 2px 2px;
+  scrollbar-color: #dfa2c3 transparent;
+}
+
+.retro-friends-card.retro-friends-collapsed {
+  flex: 0 0 30px;
+  min-height: 30px;
+  height: 30px;
+}
+
+.retro-friends-card.retro-friends-collapsed .retro-friend-tab-panel,
+.retro-friends-card.retro-friends-collapsed .retro-friend-tab-empty {
+  max-height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.retro-friend {
+  position: relative;
+  min-height: 48px;
+  gap: 8px;
+  margin: 3px 5px;
+  padding: 5px 22px 5px 7px;
+  border: 0;
+  border-radius: 16px 13px 15px 12px;
+  background: rgb(255 255 255 / .42);
+  box-shadow: inset 0 1px rgb(255 255 255 / .68);
+  transform-origin: center;
+  transition: transform 140ms cubic-bezier(.2, .9, .35, 1.25), background 140ms ease, box-shadow 140ms ease, opacity 120ms ease;
+}
+
+.retro-friend:nth-child(even) {
+  background: rgb(255 235 246 / .46);
+  transform: rotate(-.15deg);
+}
+
+.retro-friend:nth-child(3n + 1)::after { content: "★"; color: #e9ab43; }
+.retro-friend:nth-child(3n + 2)::after { content: "♥"; color: #e989af; }
+.retro-friend:nth-child(3n)::after { content: "✿"; color: #9cc36e; }
+
+.retro-friend::after {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  font-size: 10px;
+  opacity: .46;
+  text-shadow: 0 1px #fff;
+}
+
+.retro-friend:hover {
+  border: 0;
+  background: rgb(255 226 242 / .72);
+  box-shadow: inset 0 1px #fff, 0 3px 7px rgb(143 61 106 / .12);
+  transform: translateY(-1px) scale(1.01);
+}
+
+.retro-friend.retro-friend-selected,
+.retro-friend.retro-friend-menu-open {
+  border: 0;
+  background: linear-gradient(180deg, rgb(255 255 255 / .94), rgb(249 198 226 / .9));
+  box-shadow: inset 0 2px rgb(255 255 255 / .92), 0 5px 10px rgb(147 62 110 / .2);
+  transform: scale(1.025, 1.045);
+}
+
+.retro-friend.retro-friend-favorite::before {
+  content: "★";
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  bottom: 4px;
+  color: #f5ad20;
+  font-size: 12px;
+  text-shadow: 0 1px #fff;
+}
+
+.retro-friend.retro-friend-favorite::after {
+  top: 7px;
+  color: #e989af;
+}
+
+.retro-friend-avatar {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border: 2px solid rgb(255 255 255 / .92);
+  border-radius: 52% 46% 50% 44%;
+  outline: 1px solid rgb(188 98 148 / .42);
+  background-color: #f5d6e9;
+  box-shadow: 0 2px 5px rgb(115 53 88 / .14);
+  transform: rotate(-1deg);
+}
+
+.retro-friend:nth-child(even) .retro-friend-avatar {
+  transform: rotate(1.5deg);
+}
+
+.retro-friend-avatar.sprout {
+  border-radius: 12px 16px 13px 15px;
+}
+
+.retro-friend-avatar.sprout > .candy-sprout {
+  left: -26px;
+  top: -34px;
+  width: 88px;
+  height: 96px;
+}
+
+.retro-friend > div {
+  min-width: 0;
+  gap: 2px;
+}
+
+.retro-friend > div b,
+.retro-friend small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.retro-friend > div b {
+  color: #54344c;
+  font-size: 12px;
+}
+
+.retro-friend small {
+  gap: 5px;
+  color: #8c7082;
+  font-size: 10px;
+}
+
+.retro-friend small > i {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+.retro-friend small.retro-online > i {
+  position: relative;
+  width: 10px;
+  height: 7px;
+  border: 1px solid #4e992f;
+  border-radius: 90% 20% 90% 20%;
+  background: linear-gradient(135deg, #c9ef76, #63b631);
+  box-shadow: inset 0 1px rgb(255 255 255 / .6);
+  transform: rotate(-34deg);
+}
+
+.retro-friend small.retro-online > i::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  bottom: -1px;
+  width: 4px;
+  height: 1px;
+  border-radius: 1px;
+  background: #4e992f;
+}
+
+.retro-friend small.retro-busy > i {
+  position: relative;
+  width: 11px;
+  height: 8px;
+  border: 1px solid #dc5d85;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #ffacc4, #ef6f98);
+  box-shadow: inset 0 1px rgb(255 255 255 / .62);
+}
+
+.retro-friend small.retro-busy > i::before,
+.retro-friend small.retro-busy > i::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.retro-friend small.retro-busy > i::before {
+  left: -4px;
+  border-right: 4px solid #ee769c;
+}
+
+.retro-friend small.retro-busy > i::after {
+  left: auto;
+  right: -4px;
+  border-left: 4px solid #ee769c;
+}
+
+.retro-friend small.retro-away > i,
+.retro-friend small.retro-stealth > i {
+  position: relative;
+  width: 14px;
+  height: 7px;
+  border: 0;
+  border-radius: 8px 8px 7px 7px;
+  background: linear-gradient(180deg, #d9dce4, #aeb4c0);
+  box-shadow: inset 0 1px rgb(255 255 255 / .7);
+}
+
+.retro-friend small.retro-away > i::before,
+.retro-friend small.retro-away > i::after,
+.retro-friend small.retro-stealth > i::before,
+.retro-friend small.retro-stealth > i::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c7cbd4;
+}
+
+.retro-friend small.retro-away > i::after,
+.retro-friend small.retro-stealth > i::after {
+  top: -1px;
+  left: 8px;
+  width: 5px;
+  height: 5px;
+  background: #b9bec8;
+}
+
+.retro-friend-search {
+  height: 28px;
+  flex: 0 0 28px;
+  margin: 3px 7px 3px;
+  padding: 0 10px;
+  color: #a17c92;
+  border: 1px solid rgb(200 124 166 / .42);
+  border-radius: 14px 14px 14px 5px;
+  background: rgb(255 255 255 / .66);
+  box-shadow: inset 0 1px #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retro-profile-sky::after,
+  .retro-jelly-icon,
+  .retro-friend,
+  .retro-friend-tab {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.retro-friend-flyout {
+  --retro-flyout-arrow-y: 24px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483647;
+  display: none;
+  width: 184px;
+  box-sizing: border-box;
+  padding: 4px;
+  color: #4d2c43;
+  border: 1px solid #9c4778;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #fff 0, #fceaf3 100%);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .9), 0 8px 20px rgb(83 31 65 / .28);
+  pointer-events: auto;
+  font: 12px/1.2 Tahoma, "Microsoft YaHei UI", sans-serif;
+}
+.retro-friend-flyout.retro-friend-flyout-open {
+  display: block;
+  animation: retro-friend-flyout-in 110ms ease-out both;
+}
+.retro-friend-flyout::before,
+.retro-friend-flyout::after {
+  content: "";
+  position: absolute;
+  top: var(--retro-flyout-arrow-y);
+  left: 100%;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-style: solid;
+}
+.retro-friend-flyout::before {
+  border-width: 8px 0 8px 9px;
+  border-color: transparent transparent transparent #9c4778;
+}
+.retro-friend-flyout::after {
+  margin-left: -1px;
+  border-width: 7px 0 7px 8px;
+  border-color: transparent transparent transparent #f8e3ee;
+}
+.retro-friend-flyout-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 25px;
+  margin: -1px -1px 3px;
+  padding: 2px 8px;
+  border: 1px solid #e3b4cf;
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(#fff, #f0c8dd);
+  white-space: nowrap;
+}
+.retro-friend-flyout-title > i {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border: 1px solid #5cae21;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #bcf36d 0 20%, #68c52d 35% 70%, #3f9f16 75%);
+}
+.retro-friend-flyout-title b {
+  overflow: hidden;
+  max-width: 102px;
+  text-overflow: ellipsis;
+}
+.retro-friend-flyout-title small {
+  margin-left: auto;
+  color: #956f88;
+  font-size: 10px;
+}
+.retro-friend-flyout button {
+  width: 100%;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 7px;
+  color: #4d2c43;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+.retro-friend-flyout button:hover,
+.retro-friend-flyout button:focus-visible {
+  outline: 0;
+  color: #32182a;
+  border-color: #d08ab2;
+  background: linear-gradient(#fff, #edbfd7);
+}
+.retro-friend-flyout button kbd {
+  margin-left: auto;
+  color: #9b7c90;
+  background: none;
+  font: 10px Tahoma, sans-serif;
+}
+.retro-flyout-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  color: #fff;
+  border: 1px solid rgb(95 44 78 / .45);
+  border-radius: 4px;
+  box-shadow: inset 0 1px rgb(255 255 255 / .6), 0 1px #fff;
+  font: 700 12px/1 Tahoma, sans-serif;
+  text-shadow: 0 1px rgb(61 27 50 / .35);
+}
+.retro-flyout-message { background: linear-gradient(#83c7f0, #4f91cb); }
+.retro-flyout-profile { background: linear-gradient(#c7a8eb, #9372c4); }
+.retro-flyout-favorite { color: #fff9ca; background: linear-gradient(#ffd46d, #e59a23); }
+.retro-flyout-mute { background: linear-gradient(#f09bb6, #cf5d83); }
+.retro-friend-flyout-separator {
+  height: 1px;
+  margin: 3px 5px;
+  background: #dfb5cc;
+  box-shadow: 0 1px #fff;
+}
+.retro-friend-toast {
+  position: fixed;
+  right: calc(var(--retro-right-width) + 18px);
+  bottom: calc(var(--retro-status-height) + 12px);
+  z-index: 2147483647;
+  max-width: 260px;
+  padding: 7px 11px;
+  color: #fff;
+  border: 1px solid #7f345f;
+  border-radius: 5px;
+  background: linear-gradient(#d978ad, #b94884);
+  box-shadow: inset 0 1px rgb(255 255 255 / .5), 0 4px 12px rgb(80 28 63 / .25);
+  opacity: 0;
+  transform: translateY(5px);
+  pointer-events: none;
+  transition: opacity 140ms ease, transform 140ms ease;
+  font: 12px/1.3 Tahoma, "Microsoft YaHei UI", sans-serif;
+}
+.retro-friend-toast.retro-friend-toast-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes retro-friend-flyout-in {
+  from { opacity: 0; transform: translateX(5px) scale(.98); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.retro-status-bar {
+  position: fixed;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  height: var(--retro-status-height);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  color: #4b2943;
+  border: 1px solid #8e3c70;
+  background: linear-gradient(180deg, #f7d0e4, #d778aa 54%, #bd4c8a);
+  box-shadow: inset 0 1px #fff, inset 0 -1px rgb(102 34 76 / .25);
+  font-size: 12px;
+  text-shadow: 0 1px rgb(255 255 255 / .65);
+}
+
+.candy-mini-mascot {
+  width: 23px;
+  height: 23px;
+  background: var(--candy-chick) center / contain no-repeat;
+}
+.retro-status-icons {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.retro-status-icon {
+  width: 32px;
+  height: 25px;
+  flex: 0 0 32px;
+  background-image: var(--retro-status-icons);
+  background-repeat: no-repeat;
+  background-size: 256px auto;
+  background-position-y: center;
+  image-rendering: auto;
+}
+.retro-status-icon.icon-0 { background-position: 0 center; }
+.retro-status-icon.icon-1 { background-position: -32px center; }
+.retro-status-icon.icon-2 { background-position: -64px center; }
+.retro-status-icon.icon-3 { background-position: -96px center; }
+.retro-status-icon.icon-4 { background-position: -128px center; }
+.retro-status-icon.icon-5 { background-position: -160px center; }
+.retro-status-icon.icon-6 { background-position: -192px center; }
+.retro-status-icon.icon-7 { background-position: -224px center; }
+.retro-online-dot { width: 9px; height: 9px; }
+.retro-status-spacer { flex: 1; }
+.retro-status-bar time { min-width: 36px; text-align: right; }
+
+/* Full candy jelly left navigation. The visible controls proxy the native Codex
+   navigation so projects, tasks, search and profile menus remain functional. */
+:root.codex-dream-skin {
+  --retro-left-live-width: 275px;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel > * {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Keep the real profile trigger as a nearly transparent hit target above the
+   decorative profile row. This gives Electron a trusted pointer event, which
+   Radix menus require, while the user still sees the candy-styled control. */
+html.codex-dream-skin aside.app-shell-left-panel > div.max-w-full {
+  opacity: 1 !important;
+  pointer-events: none !important;
+}
+html.codex-dream-skin aside.app-shell-left-panel nav {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Let the candy-styled Codex heading use Codex's real mode switch. The native
+   trigger remains visually transparent, but it receives the user's trusted
+   click so the Codex / ChatGPT menu behaves exactly like the original UI. */
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模式"] {
+  position: fixed !important;
+  z-index: 2147483600 !important;
+  top: 5px !important;
+  left: 0 !important;
+  width: calc(100% - 2px) !important;
+  height: 34px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: .001 !important;
+  pointer-events: auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+/* Each decorative candy task row is backed by the corresponding native Codex
+   task control. Keeping the native control as the hit target preserves the
+   trusted pointer event required by the desktop router. */
+html.codex-dream-skin aside.app-shell-left-panel .retro-native-task-hit {
+  position: fixed !important;
+  z-index: 2147483600 !important;
+  transform: translate(var(--retro-native-task-x), var(--retro-native-task-y)) !important;
+  width: var(--retro-native-task-width) !important;
+  height: var(--retro-native-task-height) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: .001 !important;
+  pointer-events: auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+.retro-left-task-list button {
+  pointer-events: none !important;
+}
+
+/* Settings replaces the normal Codex sidebar with its own navigation tree.
+   Reveal that native tree and move the decorative task rail out of the way so
+   every settings category stays visible and interactive. */
+html.codex-dream-skin:has(aside.app-shell-left-panel nav[aria-label="设置"])
+  aside.app-shell-left-panel > *,
+html.codex-dream-skin:has(aside.app-shell-left-panel nav[aria-label="设置"])
+  aside.app-shell-left-panel nav[aria-label="设置"] {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+html.codex-dream-skin:has(aside.app-shell-left-panel nav[aria-label="设置"])
+  .retro-left-rail {
+  display: none !important;
+}
+
+html.codex-dream-skin:has(aside.app-shell-left-panel nav[aria-label="设置"])
+  aside.app-shell-left-panel::after {
+  content: none !important;
+  display: none !important;
+}
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label="打开个人资料菜单"] {
+  position: fixed !important;
+  z-index: 2147483600 !important;
+  left: 0 !important;
+  bottom: 67px !important;
+  width: calc(100% - 2px) !important;
+  height: 55px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: .001 !important;
+  pointer-events: auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.codex-dream-skin [data-radix-popper-content-wrapper]:has([role="menu"]),
+html.codex-dream-skin [data-radix-popper-content-wrapper]:has([role="tooltip"]),
+html.codex-dream-skin [role="menu"],
+html.codex-dream-skin [role="tooltip"] {
+  z-index: 2147483646 !important;
+}
+
+.retro-left-rail,
+.retro-main-caption {
+  box-sizing: border-box;
+  font-family: Tahoma, "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+.retro-left-rail {
+  position: fixed;
+  z-index: 4;
+  top: 105px;
+  left: 8px;
+  bottom: 31px;
+  width: var(--retro-left-live-width);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #39263d;
+  border: 1px solid #924071;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(90deg, #fffafd, #fcedf5 70%, #f5d7e8);
+  box-shadow: inset 0 0 0 1px #fff, 1px 0 4px rgb(92 30 69 / .16);
+  pointer-events: none;
+}
+
+.retro-left-rail button {
+  appearance: none;
+  color: inherit;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.retro-left-title {
+  height: 34px;
+  flex: 0 0 34px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px 0 7px;
+  border-bottom: 1px solid #aa5387;
+  background: linear-gradient(180deg, #fff 0, #f8dcea 50%, #dd9fc0 100%);
+  box-shadow: inset 0 1px #fff;
+  text-shadow: 0 1px #fff;
+}
+.retro-left-title b { font-size: 15px; }
+.retro-left-title > span:last-child { margin-left: auto; color: #75445f; }
+.candy-left-mascot {
+  width: 30px;
+  height: 30px;
+  background: var(--candy-chick) center / contain no-repeat;
+}
+
+.retro-left-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(rgb(255 255 255 / .52), rgb(255 247 252 / .38));
+}
+
+.retro-left-nav {
+  display: grid;
+  padding: 5px 7px 6px;
+}
+
+.retro-left-nav button,
+.retro-left-pinned button,
+.retro-left-project,
+.retro-left-task-list button {
+  width: 100%;
+  min-height: 29px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 2px 9px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  text-shadow: 0 1px #fff;
+}
+
+.retro-left-nav button:hover,
+.retro-left-pinned button:hover,
+.retro-left-project:hover,
+.retro-left-task-list button:hover {
+  border-color: #d48caf;
+  background: linear-gradient(#fff, #f5cce0);
+  box-shadow: inset 0 1px #fff;
+}
+
+.retro-left-nav i {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  flex: 0 0 25px;
+  place-items: center;
+  color: #fff;
+  border: 1px solid rgb(91 50 89 / .5);
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgb(255 255 255 / .7), 0 1px 2px rgb(69 31 61 / .18);
+  font-style: normal;
+  font-weight: 800;
+  text-shadow: 0 -1px rgb(70 34 68 / .35);
+}
+.retro-left-nav .nav-new { background: linear-gradient(#ffd969, #ee9e31); }
+.retro-left-nav .nav-scheduled { background: linear-gradient(#ff97c9, #d84f97); }
+.retro-left-nav .nav-plugin { background: linear-gradient(#aeea8c, #62ad4f); }
+.retro-left-nav .nav-site { background: linear-gradient(#a8ddff, #5da4d6); }
+.retro-left-nav .nav-pr { background: linear-gradient(#cbb7ff, #8068cf); }
+.retro-left-nav .nav-chat { background: linear-gradient(#ffe681, #e2ab32); }
+
+.retro-left-section {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  color: #764063;
+  border-top: 1px solid #c77da7;
+  border-bottom: 1px solid #c77da7;
+  background: linear-gradient(180deg, #fff 0, #fae4ef 54%, #e7b2cf 100%);
+  box-shadow: inset 0 1px #fff;
+  font-size: 12px;
+  text-shadow: 0 1px #fff;
+}
+.retro-left-section span { margin-left: auto; }
+.retro-left-section-compact { margin-top: 2px; }
+
+.retro-left-pinned,
+.retro-left-task-list {
+  display: grid;
+  padding: 3px 7px;
+}
+.retro-left-project { padding-inline: 16px; }
+
+.retro-folder-icon,
+.retro-task-icon {
+  position: relative;
+  width: 22px;
+  height: 16px;
+  flex: 0 0 22px;
+  border: 1px solid #bd771f;
+  border-radius: 2px;
+  background: linear-gradient(#ffe895, #efb335);
+  box-shadow: inset 0 1px #fff5c6;
+}
+.retro-folder-icon::before,
+.retro-task-icon::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -5px;
+  width: 10px;
+  height: 5px;
+  border: 1px solid #bd771f;
+  border-bottom: 0;
+  border-radius: 2px 2px 0 0;
+  background: #ffd96b;
+}
+.retro-task-icon {
+  width: 18px;
+  height: 18px;
+  flex-basis: 18px;
+  border-color: #8c70aa;
+  background: linear-gradient(#f4e6ff, #c4a6de);
+}
+.retro-task-icon::before { display: none; }
+.retro-left-task-list button > span,
+.retro-left-pinned button > span,
+.retro-left-project > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.retro-left-profile {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-top: 1px solid #bf6a9c !important;
+  background: linear-gradient(#fff, #f6d8e8) !important;
+  pointer-events: none !important;
+}
+.retro-left-profile:hover { background: linear-gradient(#fff, #f0c4dc) !important; }
+.retro-left-profile-avatar {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  background: var(--candy-chick) center / contain no-repeat;
+}
+.retro-left-profile > span:nth-child(2) { display: grid; gap: 3px; }
+.retro-left-profile small { display: flex; align-items: center; gap: 4px; color: #705468; }
+.retro-left-profile small i {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #4d8a2d;
+  border-radius: 50%;
+  background: #77c62e;
+}
+.retro-left-profile em { margin-left: auto; font-style: normal; }
+
+.retro-left-search {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 0 10px;
+  border-top: 1px solid #d09aba !important;
+  background: #fff !important;
+  color: #8b6c82 !important;
+}
+.retro-left-search span { font-size: 20px; color: #62445d; }
+.retro-left-search em { font-style: normal; }
+
+/* Left rail v2: candy jelly-style chick toolbox with soft sticker hierarchy. */
+.retro-left-rail {
+  color: #4a3047;
+  border-color: #a65585;
+  border-radius: 11px 11px 0 0;
+  background:
+    radial-gradient(circle at 12% 8%, rgb(255 255 255 / .88) 0 2px, transparent 3px),
+    linear-gradient(155deg, #fffafd 0, #fcedf5 55%, #f8e1ee 100%);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .82), 1px 0 5px rgb(92 30 69 / .14);
+  font-family: "Dream Chill Round Gothic", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+.retro-left-title {
+  position: relative;
+  height: 70px;
+  flex: 0 0 70px;
+  gap: 8px;
+  margin: 7px 8px 4px;
+  padding: 7px 8px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 17px 17px 12px 12px;
+  background:
+    radial-gradient(circle at 86% 21%, #fff 0 2px, transparent 3px),
+    radial-gradient(circle at 74% 72%, rgb(255 255 255 / .72) 0 3px, transparent 4px),
+    linear-gradient(150deg, #fff6c9 0, #ffe4ec 48%, #e5dcff 100%);
+  box-shadow: inset 0 1px #fff, 0 3px 9px rgb(128 66 106 / .16);
+  text-shadow: 0 1px #fff;
+}
+.retro-left-title::before,
+.retro-left-title::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+.retro-left-title::before {
+  left: 11px;
+  right: 11px;
+  bottom: -3px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(167 93 133 / .1);
+  filter: blur(3px);
+}
+.retro-left-title::after {
+  content: "✦";
+  right: 9px;
+  top: 5px;
+  color: #fff;
+  font-size: 12px;
+  text-shadow: 0 1px 3px #d98bb8;
+}
+.candy-left-mascot {
+  position: relative;
+  width: 48px;
+  height: 52px;
+  flex: 0 0 48px;
+  border-radius: 14px;
+  background-image: var(--candy-sprout);
+  background-repeat: no-repeat;
+  background-size: 800% 1100%;
+  background-position: 14.2857% 0%;
+  filter: drop-shadow(0 3px 2px rgb(100 69 93 / .2));
+  image-rendering: pixelated;
+}
+.retro-left-title-copy {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+  align-content: center;
+}
+.retro-left-title-copy b {
+  overflow: hidden;
+  color: #5b3150;
+  font-size: 15px;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.retro-left-title-copy small {
+  overflow: hidden;
+  color: #98758e;
+  font-size: 9px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.retro-left-mode-switch {
+  position: absolute;
+  right: 7px;
+  bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  max-width: 72px;
+  padding: 2px 7px !important;
+  color: #77566d !important;
+  border: 1px solid rgb(181 111 151 / .36) !important;
+  border-radius: 999px;
+  background: rgb(255 255 255 / .68) !important;
+  box-shadow: inset 0 1px #fff;
+  font-size: 9px !important;
+  line-height: 1;
+}
+.retro-left-mode-switch:hover { transform: translateY(-1px); background: #fff !important; }
+.retro-left-mode-switch span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.retro-left-mode-switch i { font-style: normal; }
+
+.retro-left-scroll {
+  padding-bottom: 4px;
+  background: transparent;
+  scrollbar-color: #dda1c2 transparent;
+  scrollbar-width: thin;
+}
+
+.retro-left-nav {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  padding: 6px 10px 8px;
+}
+.retro-left-nav button {
+  position: relative;
+  min-height: 58px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px 3px;
+  border: 0;
+  border-radius: 15px;
+  background: rgb(255 255 255 / .56);
+  box-shadow: inset 0 1px rgb(255 255 255 / .9), 0 2px 6px rgb(122 60 98 / .09);
+  text-align: center;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+.retro-left-nav button:hover {
+  z-index: 1;
+  transform: translateY(-2px);
+  border-color: transparent;
+  background: rgb(255 255 255 / .86);
+  box-shadow: inset 0 1px #fff, 0 5px 10px rgb(122 60 98 / .16);
+}
+.retro-left-nav button:active,
+.retro-left-nav button.retro-shortcut-selected {
+  transform: translateY(-1px) scale(1.035);
+  background: linear-gradient(145deg, #fff, #f7d4e7);
+  box-shadow: inset 0 2px 4px rgb(255 255 255 / .95), 0 4px 9px rgb(151 64 113 / .2);
+}
+.retro-left-nav button.retro-shortcut-selected::after {
+  content: "★";
+  position: absolute;
+  right: 6px;
+  top: 3px;
+  color: #f5b839;
+  font-size: 11px;
+  text-shadow: 0 1px #fff;
+}
+.retro-left-nav button > span {
+  width: 100%;
+  overflow: hidden;
+  color: #55384f;
+  font-size: 11px;
+  line-height: 1.1;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.retro-left-nav i {
+  width: 29px;
+  height: 29px;
+  flex-basis: 29px;
+  border-color: rgb(91 50 89 / .34);
+  border-radius: 10px 10px 12px 12px;
+  box-shadow: inset 0 2px rgb(255 255 255 / .68), 0 2px 3px rgb(69 31 61 / .16);
+  font-size: 16px;
+}
+
+.retro-left-section {
+  height: 29px;
+  margin: 5px 10px 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.retro-left-section b {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  padding: 0 10px;
+  color: #65445d;
+  border-radius: 7px 12px 9px 5px;
+  box-shadow: inset 0 1px rgb(255 255 255 / .8), 0 2px 4px rgb(109 56 89 / .1);
+  font-size: 11px;
+  transform: rotate(-.5deg);
+}
+.retro-sticker-yellow b { background: linear-gradient(135deg, #fff1a9, #ffe0b8); }
+.retro-sticker-mint b { background: linear-gradient(135deg, #dff7c8, #ccefe5); }
+.retro-sticker-blue b { background: linear-gradient(135deg, #ddf2ff, #e4ddff); }
+.retro-sticker-pink b { background: linear-gradient(135deg, #ffe1ef, #f6cde3); }
+.retro-left-section > button {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  padding: 0;
+  color: #805c74;
+  border: 1px solid rgb(177 110 149 / .28);
+  border-radius: 50%;
+  background: rgb(255 255 255 / .72);
+  box-shadow: inset 0 1px #fff, 0 1px 3px rgb(106 53 85 / .1);
+  font-size: 11px;
+  transition: transform 130ms ease, background 130ms ease;
+}
+.retro-left-section > button:hover { transform: scale(1.08); background: #fff; }
+.retro-left-section-compact { margin-top: 3px; }
+
+.retro-left-section-body {
+  max-height: 620px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 180ms ease, opacity 120ms ease, margin 180ms ease;
+}
+.retro-left-section-body.retro-section-collapsed {
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.retro-left-expand-note {
+  margin: 2px 12px 7px;
+  padding: 7px 9px;
+  color: #8d7084;
+  border-radius: 10px;
+  background: rgb(237 245 255 / .65);
+  box-shadow: inset 0 1px #fff;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.retro-left-pinned,
+.retro-left-task-list {
+  gap: 6px;
+  padding: 3px 10px 7px;
+}
+.retro-left-pinned button,
+.retro-left-project {
+  min-height: 40px;
+  margin: 2px 10px 7px;
+  padding: 5px 9px;
+  border: 0;
+  border-radius: 13px;
+  background: rgb(255 255 255 / .68);
+  box-shadow: inset 0 1px #fff, 0 2px 7px rgb(110 55 89 / .1);
+  transition: transform 130ms ease, box-shadow 130ms ease, background 130ms ease;
+}
+.retro-left-pinned button { width: auto; margin: 0; }
+.retro-left-pinned button:hover,
+.retro-left-project:hover {
+  transform: translateY(-1px);
+  border-color: transparent;
+  background: #fff8fc;
+  box-shadow: inset 0 1px #fff, 0 4px 9px rgb(110 55 89 / .14);
+}
+.retro-left-project em {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 2px 6px;
+  color: #58845d;
+  border-radius: 999px;
+  background: #dcf3d2;
+  font-size: 9px;
+  font-style: normal;
+  text-shadow: 0 1px #fff;
+}
+.retro-folder-icon {
+  width: 27px;
+  height: 21px;
+  flex: 0 0 27px;
+  border: 0;
+  border-radius: 6px 7px 8px 6px;
+  background: linear-gradient(145deg, #ffe895, #f4b94b);
+  box-shadow: inset 0 2px #fff2bc, 0 2px 3px rgb(157 104 35 / .16);
+}
+.retro-folder-icon::before {
+  left: 3px;
+  top: -4px;
+  width: 12px;
+  height: 6px;
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  background: #ffd873;
+}
+
+.retro-left-task-list button.retro-task-note {
+  position: relative;
+  min-height: 42px;
+  gap: 7px;
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 8px 13px 10px 7px;
+  background:
+    linear-gradient(90deg, transparent 0 7px, rgb(226 143 183 / .13) 8px, transparent 9px),
+    linear-gradient(145deg, rgb(255 255 255 / .86), rgb(255 244 249 / .82));
+  box-shadow: inset 0 1px #fff, 0 2px 6px rgb(107 54 87 / .09);
+  transition: transform 130ms ease, box-shadow 130ms ease, background 130ms ease;
+}
+.retro-left-task-list button.retro-task-note:nth-child(even) {
+  border-radius: 12px 7px 8px 13px;
+  background:
+    linear-gradient(90deg, transparent 0 7px, rgb(125 177 210 / .1) 8px, transparent 9px),
+    linear-gradient(145deg, rgb(253 254 255 / .88), rgb(246 242 255 / .82));
+}
+.retro-left-task-list button.retro-task-note:hover {
+  transform: translateY(-1px) rotate(-.2deg);
+  border-color: transparent;
+  background: linear-gradient(145deg, #fff, #fbe4ef);
+  box-shadow: inset 0 1px #fff, 0 4px 9px rgb(107 54 87 / .14);
+}
+.retro-left-task-list button.retro-task-running {
+  min-height: 53px;
+  transform: scale(1.015);
+  background: linear-gradient(145deg, #fff9fc, #f7cee2);
+  box-shadow: inset 0 2px 4px rgb(255 255 255 / .95), 0 5px 11px rgb(152 68 114 / .18);
+}
+.retro-left-task-list button.retro-task-running::after {
+  content: "✦";
+  position: absolute;
+  right: 7px;
+  top: 4px;
+  color: #f2a9c8;
+  font-size: 11px;
+}
+.retro-task-icon {
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  font-style: normal;
+}
+.retro-task-icon::before {
+  position: static;
+  display: block;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: transparent;
+  line-height: 1;
+}
+.retro-task-icon-pending::before { content: "❀"; color: #d98db7; font-size: 20px; }
+.retro-task-icon-running::before { content: "🌱"; font-size: 18px; animation: retro-task-sprout-breathe 2.8s ease-in-out infinite; }
+.retro-task-icon-completed {
+  color: #fff;
+  background: linear-gradient(#f69bc3, #dc669f);
+  box-shadow: inset 0 1px rgb(255 255 255 / .7), 0 1px 3px rgb(153 63 111 / .2);
+}
+.retro-task-icon-completed::before { content: "✓"; color: #fff; font-size: 14px; font-weight: 800; }
+.retro-task-copy {
+  min-width: 0;
+  display: grid;
+  flex: 1;
+  gap: 2px;
+  overflow: hidden;
+}
+.retro-task-label {
+  overflow: hidden;
+  color: #50364b;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.retro-task-copy small {
+  overflow: hidden;
+  color: #a15d82;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@keyframes retro-task-sprout-breathe {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-1px) rotate(-3deg); }
+}
+
+.retro-left-profile {
+  min-height: 54px;
+  margin: 5px 8px 4px;
+  padding: 5px 8px;
+  border: 0 !important;
+  border-radius: 15px;
+  background: linear-gradient(145deg, rgb(255 255 255 / .9), rgb(248 218 234 / .88)) !important;
+  box-shadow: inset 0 1px #fff, 0 3px 8px rgb(105 48 82 / .13);
+  pointer-events: auto !important;
+}
+.retro-left-profile:hover { transform: translateY(-1px); background: #fff4fa !important; }
+.retro-left-profile-avatar {
+  width: 39px;
+  height: 39px;
+  flex-basis: 39px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #e5a7c7;
+}
+.retro-left-profile-copy { min-width: 0; }
+.retro-left-profile-copy b,
+.retro-left-profile-copy small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.retro-left-profile-copy small { font-size: 9px; }
+
+.retro-left-search {
+  height: 36px;
+  flex: 0 0 36px;
+  margin: 0 8px 7px;
+  padding: 0 11px;
+  border: 0 !important;
+  border-radius: 18px 18px 18px 7px;
+  background: rgb(255 255 255 / .88) !important;
+  box-shadow: inset 0 1px #fff, 0 2px 7px rgb(103 51 83 / .12);
+}
+.retro-left-search:hover { background: #fff !important; box-shadow: inset 0 1px #fff, 0 4px 9px rgb(103 51 83 / .15); }
+.retro-left-search span { font-size: 18px; }
+.retro-left-search em { overflow: hidden; flex: 1; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.retro-left-search > i { color: #b0809d; font-size: 10px; font-style: normal; }
+
+@media (prefers-reduced-motion: reduce) {
+  .retro-left-rail *,
+  .retro-task-icon-running::before {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.retro-main-caption {
+  position: fixed;
+  z-index: 3;
+  top: 105px;
+  left: calc(8px + var(--retro-left-live-width) + var(--retro-shell-gap));
+  right: calc(8px + var(--retro-right-width) + var(--retro-shell-gap));
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px;
+  color: #40253d;
+  border: 1px solid #9b477b;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, #fff 0, #f8deec 54%, #dfa3c3 100%);
+  box-shadow: inset 0 1px #fff, 0 1px 3px rgb(83 31 64 / .14);
+  text-shadow: 0 1px #fff;
+}
+.retro-main-caption > span {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  place-items: center;
+  color: #a54a7f;
+  border: 1px solid #c68cac;
+  border-radius: 3px;
+  background: #fff;
+}
+.retro-main-caption b {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html.codex-dream-skin main.main-surface {
+  padding-top: 34px !important;
+}
+
+/* ChatGPT supplies its own conversation header and full-height chat surface.
+   The candy task caption is useful in Codex mode, but would cover that native
+   header in ChatGPT mode, so release the reserved strip completely. */
+html.codex-dream-skin.retro-chatgpt-mode .retro-main-caption {
+  display: none !important;
+}
+
+html.codex-dream-skin.retro-chatgpt-mode main.main-surface {
+  padding-top: 0 !important;
+}
+
+/* Quick chat is a native floating conversation whose own title bar lives in
+   the same vertical area as the decorative candy toolbar and task caption. Hide
+   only those two decorations while the floating chat is open, then let :has()
+   restore them automatically as soon as its native close button disappears. */
+html.codex-dream-skin:has(button[aria-label="关闭聊天"]) .retro-toolbar,
+html.codex-dream-skin:has(button[aria-label="关闭聊天"]) .retro-main-caption {
+  display: none !important;
+}
+
+/* Classic message composer toolbar while retaining Codex's native controls. */
+html.codex-dream-skin .composer-surface-chrome::before {
+  content: "☺  表情　　▣  图片　　🔗  附件" !important;
+  min-height: 30px;
+  display: flex !important;
+  align-items: center;
+  padding: 0 12px;
+  color: #68455e;
+  border-bottom: 1px solid #d8a4c1;
+  background: linear-gradient(#fff, #f5d6e6);
+  font: 12px/1 Tahoma, "Microsoft YaHei UI", sans-serif;
+  white-space: pre;
+  pointer-events: none;
+}
+
+html.codex-dream-skin .composer-surface-chrome::after {
+  content: "ϟ";
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  color: #9a5a7e;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+html.codex-dream-skin .composer-surface-chrome {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Conversation rows and the native message actions adopt compact messenger
+   cards without hiding any generated text or tool activity. */
+html.codex-dream-skin main.main-surface [class~="bg-token-foreground/5"][class~="rounded-2xl"] {
+  color: #4b2e47 !important;
+  border: 1px solid #e0b5cc !important;
+  border-radius: 7px !important;
+  background: linear-gradient(180deg, #fff 0, #fff8fc 60%, #f8e6f0 100%) !important;
+  box-shadow: inset 0 1px #fff, 0 1px 2px rgb(90 35 70 / .08) !important;
+}
+
+html.codex-dream-skin main.main-surface [class*="_markdownContent_"] {
+  color: #452d45 !important;
+  line-height: 1.58 !important;
+}
+
+html.codex-dream-skin main.main-surface [class*="_markdownContent_"] a {
+  color: #a43878 !important;
+  text-decoration: underline !important;
+}
+
+html.codex-dream-skin main.main-surface button[aria-label="复制"],
+html.codex-dream-skin main.main-surface button[aria-label="喜欢"],
+html.codex-dream-skin main.main-surface button[aria-label="不喜欢"],
+html.codex-dream-skin main.main-surface button[aria-label="从这里继续新任务"] {
+  width: auto !important;
+  min-width: 34px !important;
+  height: 24px !important;
+  gap: 3px !important;
+  padding: 0 5px !important;
+  color: #755268 !important;
+  border: 1px solid transparent !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+  font-size: 11px !important;
+}
+
+html.codex-dream-skin main.main-surface button[aria-label="复制"]::after { content: "复制"; }
+html.codex-dream-skin main.main-surface button[aria-label="喜欢"]::after { content: "赞"; }
+html.codex-dream-skin main.main-surface button[aria-label="不喜欢"]::after { content: "踩"; }
+html.codex-dream-skin main.main-surface button[aria-label="从这里继续新任务"]::after { content: "分享"; }
+
+html.codex-dream-skin main.main-surface button[aria-label="复制"]:hover,
+html.codex-dream-skin main.main-surface button[aria-label="喜欢"]:hover,
+html.codex-dream-skin main.main-surface button[aria-label="不喜欢"]:hover,
+html.codex-dream-skin main.main-surface button[aria-label="从这里继续新任务"]:hover {
+  border-color: #d79ab9 !important;
+  background: linear-gradient(#fff, #f5d2e4) !important;
+}
+
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"] {
+  width: 86px !important;
+  border-radius: 5px !important;
+}
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"] svg { display: none !important; }
+html.codex-dream-skin .composer-surface-chrome button[aria-label="发送"]::before {
+  content: "发送(S)";
+  font-weight: 700;
+}
+
+/* candy-style left/right conversation bubbles. */
+html.codex-dream-skin main.main-surface .retro-user-bubble,
+html.codex-dream-skin main.main-surface .retro-assistant-bubble {
+  position: relative !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+  padding: 27px 12px 10px !important;
+  border-radius: 8px !important;
+  box-shadow: inset 0 1px #fff, 0 2px 5px rgb(91 35 69 / .12) !important;
+}
+
+html.codex-dream-skin main.main-surface .retro-user-bubble {
+  margin-right: 39px !important;
+  color: #4b2944 !important;
+  border: 1px solid #ce79a5 !important;
+  background: linear-gradient(180deg, #fff8fc 0, #f9d8e8 58%, #f2bfd9 100%) !important;
+}
+
+html.codex-dream-skin main.main-surface .retro-assistant-bubble {
+  width: calc(100% - 48px) !important;
+  max-width: calc(100% - 48px) !important;
+  margin: 2px 0 4px 39px !important;
+  color: #3f3340 !important;
+  border: 1px solid #c8a4bd !important;
+  background: linear-gradient(180deg, #fff 0, #fffafd 65%, #f8edf3 100%) !important;
+}
+
+html.codex-dream-skin main.main-surface .retro-user-bubble::before,
+html.codex-dream-skin main.main-surface .retro-assistant-bubble::before {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  color: #9a4b7a;
+  font: 700 11px/14px Tahoma, "Microsoft YaHei UI", sans-serif;
+  text-shadow: 0 1px #fff;
+}
+html.codex-dream-skin main.main-surface .retro-user-bubble::before { content: "你"; }
+html.codex-dream-skin main.main-surface .retro-assistant-bubble::before { content: "芽芽助手"; }
+
+html.codex-dream-skin main.main-surface .retro-user-bubble::after,
+html.codex-dream-skin main.main-surface .retro-assistant-bubble::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  width: 13px;
+  height: 13px;
+  transform: rotate(45deg);
+  box-shadow: 1px -1px 1px rgb(86 32 65 / .04);
+}
+html.codex-dream-skin main.main-surface .retro-user-bubble::after {
+  right: -7px;
+  border-top: 1px solid #ce79a5;
+  border-right: 1px solid #ce79a5;
+  background: #f9d8e8;
+}
+html.codex-dream-skin main.main-surface .retro-assistant-bubble::after {
+  left: -7px;
+  border-left: 1px solid #c8a4bd;
+  border-bottom: 1px solid #c8a4bd;
+  background: #fff;
+}
+
+html.codex-dream-skin main.main-surface .retro-bubble-avatar {
+  position: absolute;
+  z-index: 2;
+  top: 1px;
+  width: 32px;
+  height: 34px;
+  display: block;
+  border: 1px solid #a7658d;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px #fff, 0 1px 2px rgb(81 30 60 / .13);
+  pointer-events: none;
+}
+html.codex-dream-skin main.main-surface .retro-bubble-avatar-user {
+  right: -40px;
+  background: #fff var(--candy-user-avatar) center / cover no-repeat;
+}
+html.codex-dream-skin main.main-surface .retro-bubble-avatar-assistant {
+  left: -40px;
+  overflow: hidden;
+  background-color: #eee4f7;
+  background-image: none;
+}
+html.codex-dream-skin main.main-surface .retro-bubble-avatar-assistant::before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: -26px;
+  width: 67px;
+  height: 78px;
+  background-image: var(--candy-sprout);
+  background-repeat: no-repeat;
+  background-size: 800% 1100%;
+  background-position: 14.2857% 0%;
+  image-rendering: pixelated;
+}
+
+html.codex-dream-skin main.main-surface .retro-assistant-bubble pre,
+html.codex-dream-skin main.main-surface .retro-assistant-bubble [class*="codeBlock"] {
+  margin-top: 8px !important;
+  border-color: #bf91ad !important;
+  background: #fbfcff !important;
+}
+
+@media (max-width: 1050px) {
+  :root.codex-dream-skin { --retro-right-width: 198px; }
+  .retro-tool { min-width: 62px; padding: 0 4px; font-size: 12px; }
+  .retro-tool-icon { width: 25px; height: 25px; font-size: 17px; }
+}
+
+@media (max-width: 820px) {
+  html.codex-dream-skin #root > div.relative.flex.flex-col
+    > div.relative.isolate.flex.max-h-full.min-h-0.w-full.flex-1 {
+    padding-right: 8px !important;
+  }
+  .retro-right-rail { display: none; }
+  .retro-toolbar { overflow: hidden; padding-inline: 8px; gap: 2px; }
+}
+
+/* The active theme art is a square candy avatar, not a banner. Painting it with
+   cover enlarged the penguin into a cropped face and then duplicated it in the
+   corner. Give the new-task welcome card its own lightweight messenger art. */
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child {
+  background-color: #fff8fc !important;
+  background-image:
+    radial-gradient(circle at 9% 22%, rgb(255 255 255 / .95) 0 7px, rgb(238 171 207 / .32) 8px 10px, transparent 11px),
+    radial-gradient(circle at 88% 26%, rgb(255 255 255 / .92) 0 18px, rgb(224 126 180 / .22) 19px 22px, transparent 23px),
+    radial-gradient(circle at 81% 78%, rgb(255 255 255 / .9) 0 8px, rgb(234 157 199 / .24) 9px 11px, transparent 12px),
+    radial-gradient(ellipse at 106% 50%, rgb(240 151 199 / .38) 0 22%, transparent 23%),
+    radial-gradient(ellipse at -5% 112%, rgb(247 193 221 / .45) 0 27%, transparent 28%),
+    linear-gradient(135deg, #fffdfd 0%, #fff1f8 46%, #f8cfe4 100%) !important;
+  background-size: auto !important;
+  background-position: center !important;
+}
+
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child::before {
+  background: linear-gradient(115deg, rgb(255 255 255 / .48), transparent 45%, rgb(255 255 255 / .2)) !important;
+}
+
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child::after {
+  content: none !important;
+  display: none !important;
+}
+
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child > div:first-child {
+  justify-content: center !important;
+}
+
+html.codex-dream-skin .dream-home > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child {
+  width: 100% !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Candy frame v1: replace the remaining rigid jelly borders with a soft,
+   low-cost jelly shell. Gradients and inset highlights provide the glassy
+   depth without backdrop blur or continuous animation. */
+:root.codex-dream-skin {
+  --candy-frame-pink: #ef9fc8;
+  --candy-frame-rose: #d972aa;
+  --candy-frame-lilac: #d9c9ff;
+  --candy-frame-white: rgb(255 255 255 / .84);
+  --candy-frame-shadow: rgb(121 53 94 / .16);
+}
+
+#codex-dream-skin-chrome {
+  inset: 2px !important;
+  border: 2px solid rgb(255 255 255 / .86) !important;
+  border-radius: 17px !important;
+  box-shadow:
+    inset 0 0 0 2px rgb(238 142 192 / .44),
+    inset 0 0 0 5px rgb(255 220 239 / .2),
+    inset 0 1px 0 5px rgb(255 255 255 / .35) !important;
+}
+
+html.codex-dream-skin [class~="group/application-menu-top-bar"] {
+  color: #58344f !important;
+  border-bottom: 0 !important;
+  background:
+    radial-gradient(ellipse at 18% -10%, rgb(255 255 255 / .72) 0 17%, transparent 18%),
+    radial-gradient(ellipse at 82% 120%, rgb(225 199 255 / .42) 0 18%, transparent 19%),
+    linear-gradient(180deg, #fff8fc 0%, #f7c6de 48%, #e88fbd 100%) !important;
+  box-shadow:
+    inset 0 2px rgb(255 255 255 / .92),
+    inset 0 -2px rgb(198 86 146 / .2),
+    0 4px 12px rgb(127 54 96 / .12) !important;
+}
+
+html.codex-dream-skin [class~="group/application-menu-top-bar"] button {
+  border-radius: 999px !important;
+  transition: background 130ms ease, box-shadow 130ms ease, transform 130ms ease !important;
+}
+
+html.codex-dream-skin [class~="group/application-menu-top-bar"] button:hover {
+  border-color: rgb(255 255 255 / .75) !important;
+  background: linear-gradient(180deg, #fff, #f5c4dd) !important;
+  box-shadow: inset 0 2px #fff, 0 3px 7px rgb(128 54 96 / .14) !important;
+  transform: translateY(-1px);
+}
+
+html.codex-dream-skin #root > div.relative.flex.flex-col
+  > div.relative.isolate.flex.max-h-full.min-h-0.w-full.flex-1 {
+  background:
+    radial-gradient(circle at 3% 9%, rgb(255 255 255 / .56) 0 5px, transparent 6px),
+    radial-gradient(circle at 97% 20%, rgb(255 255 255 / .42) 0 7px, transparent 8px),
+    radial-gradient(ellipse at 18% 100%, rgb(224 208 255 / .48) 0 18%, transparent 19%),
+    linear-gradient(145deg, #f7c7df 0%, #eba4cc 47%, #d98abb 100%) !important;
+}
+
+.retro-toolbar {
+  top: 42px;
+  left: 9px;
+  right: 9px;
+  border: 2px solid rgb(255 255 255 / .84);
+  border-radius: 20px 20px 16px 16px;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgb(255 255 255 / .68) 0 17%, transparent 18%),
+    linear-gradient(180deg, #fff 0%, #ffebf6 48%, #f2bcda 100%);
+  box-shadow:
+    inset 0 2px rgb(255 255 255 / .96),
+    inset 0 -2px rgb(202 112 163 / .16),
+    0 6px 13px rgb(121 51 92 / .15);
+}
+
+.retro-tool {
+  border-radius: 14px;
+  transition: background 130ms ease, box-shadow 130ms ease, transform 130ms ease;
+}
+
+.retro-tool:hover {
+  background: rgb(255 255 255 / .48);
+  box-shadow: inset 0 1px rgb(255 255 255 / .86), 0 3px 7px rgb(127 57 98 / .1);
+  transform: translateY(-1px);
+}
+
+.retro-tool-icon {
+  border: 2px solid rgb(255 255 255 / .8);
+  border-radius: 12px 12px 10px 10px;
+  outline: 1px solid rgb(116 59 93 / .2);
+  box-shadow: inset 0 2px rgb(255 255 255 / .72), 0 3px 5px rgb(83 35 64 / .15);
+}
+
+.retro-tool-separator {
+  width: 4px;
+  height: 27px;
+  margin-inline: 5px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(180deg, #d68bb4 0 3px, transparent 3px 7px);
+  box-shadow: none;
+  opacity: .48;
+}
+
+.retro-left-rail {
+  left: 9px;
+  bottom: 36px;
+  border: 2px solid rgb(255 255 255 / .82);
+  border-radius: 22px 22px 16px 16px;
+  outline: 1px solid rgb(198 92 151 / .34);
+  outline-offset: -1px;
+  background:
+    radial-gradient(circle at 90% 4%, rgb(255 255 255 / .72) 0 3px, transparent 4px),
+    linear-gradient(155deg, rgb(255 253 254 / .96), rgb(252 232 243 / .94) 58%, rgb(246 218 235 / .92));
+  box-shadow:
+    inset 0 2px rgb(255 255 255 / .96),
+    0 7px 16px rgb(117 49 91 / .14);
+}
+
+.retro-left-scroll {
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+}
+
+html.codex-dream-skin aside.app-shell-left-panel {
+  border: 2px solid rgb(255 255 255 / .78) !important;
+  border-radius: 22px 22px 16px 16px !important;
+  outline: 1px solid rgb(198 92 151 / .28) !important;
+  outline-offset: -1px !important;
+  box-shadow: inset 0 2px #fff, 0 7px 16px rgb(117 49 91 / .1) !important;
+}
+
+.retro-main-caption {
+  top: 105px;
+  right: calc(6px + var(--retro-right-width) + var(--retro-shell-gap));
+  height: 36px;
+  border: 2px solid rgb(255 255 255 / .86);
+  border-radius: 18px 18px 12px 12px;
+  outline: 1px solid rgb(188 78 139 / .32);
+  outline-offset: -1px;
+  background:
+    radial-gradient(ellipse at 13% 0%, rgb(255 255 255 / .7) 0 20%, transparent 21%),
+    linear-gradient(180deg, #fff 0%, #f9d9ea 58%, #edb5d2 100%);
+  box-shadow: inset 0 2px #fff, 0 5px 11px rgb(119 49 90 / .13);
+}
+
+.retro-main-caption > span {
+  color: #a75183;
+  border: 2px solid rgb(255 255 255 / .8);
+  border-radius: 9px;
+  outline: 1px solid rgb(190 111 155 / .28);
+  background: linear-gradient(145deg, #fff, #f4d4e7);
+  box-shadow: inset 0 1px #fff, 0 2px 4px rgb(123 53 94 / .12);
+}
+
+html.codex-dream-skin main.main-surface {
+  border: 2px solid rgb(255 255 255 / .84) !important;
+  border-radius: 22px 22px 17px 17px !important;
+  outline: 1px solid rgb(190 80 140 / .3) !important;
+  outline-offset: -1px !important;
+  background: rgb(255 253 254 / .95) !important;
+  box-shadow:
+    inset 0 2px rgb(255 255 255 / .96),
+    0 7px 16px rgb(117 49 91 / .13) !important;
+}
+
+html.codex-dream-skin main.main-surface > header.app-header-tint {
+  border-bottom: 0 !important;
+  border-radius: 19px 19px 11px 11px !important;
+  background: linear-gradient(180deg, rgb(255 255 255 / .96), rgb(249 222 237 / .9)) !important;
+  box-shadow: inset 0 2px #fff, 0 3px 8px rgb(121 52 93 / .09) !important;
+}
+
+.retro-right-rail {
+  top: 105px;
+  right: 9px;
+  bottom: 36px;
+  gap: 5px;
+  padding: 4px;
+  border: 2px solid rgb(255 255 255 / .82);
+  border-radius: 22px 22px 16px 16px;
+  outline: 1px solid rgb(196 88 147 / .32);
+  outline-offset: -1px;
+  background:
+    radial-gradient(circle at 90% 5%, rgb(255 255 255 / .6) 0 3px, transparent 4px),
+    linear-gradient(160deg, rgb(255 244 251 / .82), rgb(237 166 207 / .72));
+  box-shadow: inset 0 2px rgb(255 255 255 / .88), 0 7px 16px rgb(117 49 91 / .14);
+}
+
+.retro-codex-card {
+  border: 2px solid rgb(255 255 255 / .78) !important;
+  outline: 1px solid rgb(190 96 148 / .28);
+  outline-offset: -1px;
+  box-shadow: inset 0 2px rgb(255 255 255 / .86), 0 4px 10px rgb(126 55 96 / .11) !important;
+}
+
+.retro-friends-card {
+  border-radius: 18px 18px 13px 13px !important;
+  background: linear-gradient(180deg, rgb(255 251 253 / .48), rgb(255 239 248 / .34)) !important;
+  box-shadow: inset 0 1px rgb(255 255 255 / .5) !important;
+}
+
+.retro-friend-flyout {
+  padding: 6px;
+  border: 2px solid rgb(255 255 255 / .86);
+  border-radius: 17px 17px 13px 13px;
+  outline: 1px solid rgb(184 74 135 / .38);
+  outline-offset: -1px;
+  background: linear-gradient(160deg, rgb(255 255 255 / .98), rgb(250 222 238 / .96));
+  box-shadow: inset 0 2px #fff, 0 10px 24px rgb(93 38 71 / .2);
+}
+
+.retro-friend-flyout-title {
+  border: 0;
+  border-radius: 11px 11px 8px 8px;
+  background: linear-gradient(180deg, #fff, #f4cade);
+  box-shadow: inset 0 1px #fff;
+}
+
+html.codex-dream-skin .composer-surface-chrome {
+  border: 2px solid rgb(255 255 255 / .86) !important;
+  border-radius: 20px 20px 15px 15px !important;
+  outline: 1px solid rgb(198 103 156 / .28) !important;
+  outline-offset: -1px !important;
+  background: rgb(255 252 254 / .94) !important;
+  box-shadow: inset 0 2px #fff, 0 6px 14px rgb(122 52 94 / .12) !important;
+}
+
+html.codex-dream-skin .composer-surface-chrome::before {
+  border-bottom: 0;
+  border-radius: 17px 17px 8px 8px;
+  background: linear-gradient(180deg, rgb(255 255 255 / .96), rgb(247 217 233 / .88));
+  box-shadow: inset 0 1px #fff, 0 2px 5px rgb(126 57 98 / .08);
+}
+
+.retro-status-bar {
+  left: 7px;
+  right: 7px;
+  bottom: 4px;
+  gap: 6px;
+  padding: 1px 7px;
+  border: 2px solid rgb(255 255 255 / .82);
+  border-radius: 15px;
+  outline: 1px solid rgb(182 74 135 / .36);
+  outline-offset: -1px;
+  background:
+    radial-gradient(circle at 13% 18%, rgb(255 255 255 / .9) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 76% 76%, rgb(255 242 250 / .72) 0 3px, transparent 3.5px),
+    linear-gradient(180deg, #fff4fb 0%, #f7c5df 43%, #e99ac5 100%);
+  box-shadow:
+    inset 0 2px #fff,
+    inset 0 -2px rgb(188 83 143 / .18),
+    0 3px 9px rgb(105 42 79 / .14);
+  overflow: hidden;
+}
+
+.retro-status-bar::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 8px;
+  right: 8px;
+  top: 2px;
+  height: 39%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgb(255 255 255 / .78), rgb(255 255 255 / .08));
+  pointer-events: none;
+}
+
+.retro-status-bar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.retro-status-icons {
+  box-sizing: border-box;
+  height: 24px;
+  gap: 2px;
+  padding: 1px 3px;
+  border: 1px solid rgb(255 255 255 / .76);
+  border-radius: 11px;
+  background: rgb(255 255 255 / .38);
+  box-shadow: inset 0 1px rgb(255 255 255 / .86), 0 1px 3px rgb(137 57 103 / .09);
+}
+
+.retro-status-icon {
+  box-sizing: border-box;
+  width: 32px;
+  height: 22px;
+  flex-basis: 32px;
+  border: 1px solid rgb(255 255 255 / .76);
+  border-radius: 8px;
+  box-shadow:
+    inset 0 2px rgb(255 255 255 / .72),
+    inset 0 -2px rgb(125 65 105 / .1),
+    0 1px 2px rgb(107 47 83 / .1);
+}
+
+.retro-status-icon.icon-0 { background-color: #ffd0e2; }
+.retro-status-icon.icon-1 { background-color: #d8d0ff; }
+.retro-status-icon.icon-2 { background-color: #fff0a8; }
+.retro-status-icon.icon-3 { background-color: #cdeeff; }
+.retro-status-icon.icon-4 { background-color: #ffe3a8; }
+.retro-status-icon.icon-5 { background-color: #ffc8dc; }
+.retro-status-icon.icon-6 { background-color: #ccecb8; }
+.retro-status-icon.icon-7 { background-color: #d8d3ff; }
+
+.retro-status-state {
+  box-sizing: border-box;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 3px;
+  border: 1px solid rgb(255 255 255 / .74);
+  border-radius: 11px;
+  background: rgb(255 255 255 / .4);
+  box-shadow: inset 0 1px rgb(255 255 255 / .9), 0 1px 3px rgb(117 49 90 / .08);
+}
+
+.retro-status-safe,
+.retro-status-candy,
+.retro-status-clock {
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(255 255 255 / .78);
+  border-radius: 9px;
+  background: linear-gradient(180deg, rgb(255 255 255 / .9), rgb(255 255 255 / .46));
+  box-shadow: inset 0 1px #fff, inset 0 -1px rgb(128 70 105 / .08);
+}
+
+.retro-status-safe {
+  gap: 4px;
+  padding: 0 7px 0 5px;
+  color: #5d7e4c;
+}
+
+.retro-status-safe::before {
+  content: "";
+  width: 9px;
+  height: 10px;
+  border: 1px solid #66a34b;
+  border-radius: 5px 5px 6px 6px;
+  background: linear-gradient(145deg, #dff8b4, #8ed86a);
+  box-shadow: inset 0 1px rgb(255 255 255 / .8);
+  clip-path: polygon(50% 0, 94% 18%, 86% 73%, 50% 100%, 14% 73%, 6% 18%);
+}
+
+.retro-status-candy {
+  width: 20px;
+  padding: 0;
+  font-weight: 700;
+}
+
+.retro-status-notice {
+  color: #6885b1;
+  background: linear-gradient(180deg, #f7fdff, #cdeaff);
+}
+
+.retro-status-flower {
+  color: #b55891;
+  background: linear-gradient(180deg, #fff8fd, #ffd2e8);
+}
+
+.retro-status-clock {
+  min-width: 43px !important;
+  padding: 0 6px;
+  color: #6e4561;
+  text-align: center !important;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, #fff9fd, #ecd9ff);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retro-tool,
+  html.codex-dream-skin [class~="group/application-menu-top-bar"] button {
+    transition: none !important;
+  }
+}
+
+
+/* Public-edition original artwork overrides. */
+.candy-sprout {
+  display: block;
+  background-image: var(--candy-sprout);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  image-rendering: auto;
+}
+.candy-sprout-stage {
+  animation: candy-sprout-idle-bob 3.2s ease-in-out infinite;
+}
+.candy-left-mascot {
+  background: var(--candy-chick) center / contain no-repeat !important;
+  image-rendering: auto !important;
+}
+.retro-friend-avatar.sprout > .candy-sprout {
+  inset: 2px !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+.retro-friend-avatar.avatar-strawberry { background: #fff var(--candy-user-avatar) center / cover no-repeat; }
+.retro-friend-avatar.avatar-cloud { background: #fff var(--candy-avatar-cloud) center / cover no-repeat; }
+.retro-friend-avatar.avatar-star { background: #fff var(--candy-avatar-star) center / cover no-repeat; }
+.retro-friend-avatar.avatar-mint { background: #fff var(--candy-avatar-mint) center / cover no-repeat; }
+.retro-friend-avatar.avatar-pudding { background: #fff var(--candy-avatar-pudding) center / cover no-repeat; filter: grayscale(1); }
+.retro-friend-avatar.avatar-cookie { background: #fff var(--candy-avatar-cookie) center / cover no-repeat; }
+html.codex-dream-skin main.main-surface .retro-bubble-avatar-assistant::before {
+  inset: 1px !important;
+  width: 30px !important;
+  height: 30px !important;
+  background: var(--candy-sprout) center / contain no-repeat !important;
+  image-rendering: auto !important;
+}
