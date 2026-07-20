@@ -1,0 +1,8 @@
+windows/backups/
+*.log
+*.lnk
+*.zip
+.DS_Store
+Thumbs.db
+state.json
+private-*

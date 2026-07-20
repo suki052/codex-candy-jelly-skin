@@ -1,0 +1,14 @@
+{
+  "build": "codex-candy-jelly-public-1.0.0",
+  "shellVersion": "full-ui-v24-public",
+  "launcher": "Start Codex Candy Jelly.cmd",
+  "installer": "Install Codex Candy Jelly.cmd",
+  "includes": [
+    "candy jelly shell",
+    "original public mascot artwork",
+    "generic fictional friend list",
+    "scrollable task and friend lists",
+    "chat bubbles",
+    "interaction and compatibility fixes"
+  ]
+}
